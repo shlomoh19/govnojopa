@@ -1,0 +1,36 @@
+@import '../../UI/style.scss';
+
+.locale-menu {
+  position: absolute;
+  width: 75px;
+  height: 240px;
+  left: -10px;
+  bottom: -280px;
+  z-index: 5;
+  border-radius: 6px;
+  background-color: #b0b5ca;
+  box-shadow: $boxShadow;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  cursor: pointer;
+  transition: all .2s;
+  .locale-menu-item {
+    color: white;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    transition: all ease-in .5s;
+    &:hover {
+      color: $blue;
+    }
+  }
+  
+}
+.icon-arr {
+  margin-left: 10px;
+  color: $lightBlue;
+}
+.locale-menu-close {
+  transform: rotateY(90deg);
+}

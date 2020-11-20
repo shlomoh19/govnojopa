@@ -1,0 +1,44 @@
+.join__phone {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1440px) {
+  .join__phone {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .join__phone {
+      margin-top: 10px;
+      width: 200px;
+    }
+}
+@media (max-width: 1000px) {
+  .join__phone {
+    margin-bottom: 10px;
+    width: 70%;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .befree-flex {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  .befree-container {
+    .befree-col {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .join__phone {
+    width: 100%;
+  }
+}

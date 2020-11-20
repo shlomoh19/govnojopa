@@ -1,0 +1,11 @@
+@import '../../UI/style.scss';
+
+.done {
+  color: $grey;
+  text-align: center;
+  margin-top: 30px;
+  .done__icon {
+    color: green;
+    font-size: 50px;
+  }
+}

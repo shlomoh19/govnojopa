@@ -1,0 +1,58 @@
+@import '../../UI/style.scss';
+
+/* FOOTER CONTENT */
+.footer {
+  width: 100%;
+  background: $lightGrey;
+}
+.footer__content {
+  padding-top: 50px;
+  height: 300px;
+  width: 1092px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  width: 200px;
+  transition: all .2s;
+  margin-bottom: 20px;
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+.footer-link-top {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  transition: all .2s;
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+.footer__item-top {
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-item {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-logo {
+  font-size: 20px;
+}
+
+@media (max-width: 1100px) {
+  .footer__content {
+    width: 80%;
+  }
+}

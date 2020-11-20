@@ -1,0 +1,24 @@
+@import '../../UI/style.scss';
+
+.circle {
+  width: 100px;
+  height: 100px;
+  stroke: $blue;
+  fill: $blue;
+}
+
+.circle-flex {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.swiper-container {
+  width: 100%;
+}
+
+.swiper-pagination {
+  width: 500px;
+  height: 500px;
+}

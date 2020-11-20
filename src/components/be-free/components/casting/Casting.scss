@@ -1,0 +1,151 @@
+@import '../../../../UI/style.scss';
+
+
+.befree-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: $textColor;
+  .casting_steps-title {
+    color: $blue;
+    font-weight: 400;
+    font-size: 25px;
+  }
+  .casting_steps-num {
+    font-weight: 400;
+    color: $blue;
+  }
+  .befree-title {
+    font-weight: 400;
+    margin-top: 50px;
+    letter-spacing: 3px;
+  }
+  .befree-text {
+    margin-bottom: 33px;
+    text-align: center;
+    color: $black;
+  }
+
+  .befree-flex {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    font-size: 24px;
+  }
+  .befree-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    width: 100%;
+  }
+  .casting__phone {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+.custom-checkbox {
+  z-index: -1;
+  opacity: 0;
+}
+.custom-checkbox+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+.custom-checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.custom-checkbox:checked+label::before {
+  border-color: $blue;
+  background-image: url("check-mark-black-outline.svg");
+}
+
+
+
+@media (max-width: 1440px) {
+  .befree-container {
+    .casting__phone {
+      margin-top: 20px;
+    }
+    .casting_steps-title {
+      font-size: 22px;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .befree-container {
+    .casting__phone {
+      margin-top: 10px;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .befree-container {
+    .casting__phone {
+      margin-top: 0;
+    }
+    .casting_steps-title {
+      font-size: 22px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .befree-flex {
+    width: 70%;
+    flex-direction: column;
+  }
+  .befree-container {
+    .casting__phone {
+      width: 70%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .befree-container {
+    .befree-col {
+      margin-right: 0;
+    }
+    .casting_steps-title {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .befree-container {
+    .befree-title {
+      margin-top: 20px;
+      letter-spacing: 1px;
+    }
+    .casting__phone {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .befree-container {
+    .befree-title {
+      font-size: 16px;
+    }
+  }
+}

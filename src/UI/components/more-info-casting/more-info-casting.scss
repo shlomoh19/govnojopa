@@ -1,0 +1,65 @@
+@import '../../../UI/style.scss';
+
+.casting_more-info {
+  margin-bottom: 30px;
+  font-weight: 400;
+  color: $blue;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.casting_moreInfo {
+  width: 90%;
+  display: none;
+  font-size: 28px;
+
+  .casting_moreInfo_item {
+    margin-bottom: 50px;
+    &:last-child {
+      margin-bottom: 20px;
+    }
+    .casting_moreInfo_title {
+      font-weight: 400;
+      color: $blue;
+    }
+  }
+}
+.casting_moreInfo-visible {
+  display: block;
+}
+.casting_steps-body {
+  width: 90%;
+  font-size: 26px;
+}
+
+.befree-text-casting {
+  font-size: 24px;
+  width: 90%;
+  color: $textColor;
+}
+
+@media (max-width: 1600px) {
+  .casting_steps-body {
+    width: 90%;
+    font-size: 20px;
+  }
+  .casting_moreInfo {
+    font-size: 20px;
+  }
+  .befree-text-casting {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .casting_steps-body {
+    width: 90%;
+    font-size: 16px;
+  }
+  .casting_moreInfo {
+    font-size: 16px;
+  }
+  .befree-text-casting {
+    font-size: 18px;
+  }
+}

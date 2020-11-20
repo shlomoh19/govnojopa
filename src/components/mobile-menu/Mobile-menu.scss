@@ -1,0 +1,53 @@
+@import '../../UI/style.scss';
+
+.mobile-menu {
+  padding: 30px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 150px;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  background-color: $grey;
+  animation: unMountMenu ease-in-out .5s;
+  transition: all .5s;
+  .mobile__menu-item {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 20px;
+  }
+}
+.open-menu {
+  animation: mountMenu ease-in-out .5s;
+  transition: all .5s;
+  display: flex;
+  opacity: 1;
+  z-index: 9;
+}
+.close-menu {
+  animation: unMountMenu ease-in-out .5s;
+  display: flex;
+  opacity: 0;
+  z-index: -7;
+}
+
+@keyframes mountMenu {
+  0% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes unMountMenu {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(200px);
+
+  }
+}

@@ -1,0 +1,22 @@
+@import '../../UI/style.scss';
+
+.home_page {
+  font-size: 25px;
+}
+
+.home__title {
+  text-align: center;
+  margin-top: 50px;
+  h1 {
+    font-weight: 400;
+    span {
+      color: $blue;
+    }
+  }
+}
+
+@media (max-width: 1444px) {
+  .home_page {
+    font-size: 14px;
+  }
+}

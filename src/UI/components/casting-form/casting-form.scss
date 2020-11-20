@@ -1,0 +1,14 @@
+.casting_form-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    font-size: 24px;
+}
+
+@media (max-width: 800px) {
+    .casting_form-wrapper {
+      width: 70%;
+      flex-direction: column;
+      margin-right: 0;
+    }
+}

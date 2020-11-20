@@ -1,0 +1,63 @@
+@import '../../UI/style.scss';
+
+.befree {
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+.befree__header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 16px;
+  border-bottom: 2px solid $lightBlue;
+  .befree__border {
+    height: 2px;
+    position: absolute;
+    bottom: -2px;
+    width: 25%;
+    background: $blue;
+    transition: all ease-in-out .5s;
+  }
+  .befree__header-item {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+.befree__title {
+  font-weight: 400;
+}
+
+.befree-title-blue {
+  color: $blue
+}
+
+@media (max-width: 1080px) {
+  .befree__header {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 750px) {
+  .befree__header {
+    font-size: 12px;
+  }
+}
+@media (max-width: 650px) {
+  .befree__header {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .befree__header {
+    font-size: 10px;
+  }
+}

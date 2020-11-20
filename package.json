@@ -1,0 +1,65 @@
+{
+  "name": "legendator_site",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/node-polyglot": "^2.4.1",
+    "axios": "^0.20.0",
+    "cleave.js": "^1.6.0",
+    "i18next": "^19.8.3",
+    "i18next-browser-languagedetector": "^6.0.1",
+    "i18next-http-backend": "^1.0.21",
+    "jquery": "^3.5.1",
+    "moment": "^2.29.1",
+    "node-polyglot": "^2.4.0",
+    "node-sass": "^4.14.1",
+    "ra-i18n-polyglot": "^3.9.5",
+    "react": "^16.14.0",
+    "react-admin": "^3.9.5",
+    "react-circular-progressbar": "^2.0.3",
+    "react-dom": "^16.14.0",
+    "react-hook-form": "^6.8.4",
+    "react-hover-video-player": "^6.6.3",
+    "react-i18next": "^11.7.3",
+    "react-id-swiper": "^4.0.0",
+    "react-jw-player": "^1.19.1",
+    "react-phone-input-2": "^2.13.8",
+    "react-player": "^2.6.2",
+    "react-player-controls": "^2.0.0-beta.1",
+    "react-polyglot": "^0.7.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "swiper": "^6.3.5",
+    "video-react": "^0.14.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "video.js": "^7.8.4"
+  }
+}

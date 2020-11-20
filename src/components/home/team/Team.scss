@@ -1,0 +1,134 @@
+@import '../../../UI/style.scss';
+
+
+.main__team {
+  margin: 0 auto;
+}
+.team__item {
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+}
+.team__founder {
+  margin: 20px auto;
+}
+.team__item-instagram {
+  width: 30px;
+}
+.team__item-youtube {
+  width: 40px;
+  margin-left: 20px;
+}
+.team__photo {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border: 4px solid $grey;
+  border-radius: 50%;
+  .video-team {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  }
+}
+.team__desc {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.team__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.team__item-position {
+  font-weight: 400;
+  color: $blue;
+}
+
+.team__item-name {
+  width: 60%;
+  margin: 5px auto;
+  padding: 0px 10px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  color: $black;
+}
+.team__button-mobile {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  background: #e9e9e9;
+  border-radius: 10px;
+  padding-top: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  display: none;
+  transition: all .2s;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+
+.fa-angle-down {
+  transition: all .2s;
+}
+
+.team__items.team-open {
+  display: grid;
+  .team__item {
+    width: 150px;
+    min-height: 200px;
+    .team__photo {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .team__photo {
+    width: 150px;
+    height: 150px;
+    .video-team {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  .team__item {
+    font-size: 14px;
+  }
+  .team__founder {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 750px) {
+  .team__items {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .team__items {
+    grid-template-columns: 1fr;
+    margin: 0;
+    text-align: center;
+    display: none;
+    .team__photo {
+      width: 200px;
+      height: 200px;
+      .video-team {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+  .team__button-mobile {
+    display: flex;
+  }
+}

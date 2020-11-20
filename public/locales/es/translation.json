@@ -1,0 +1,86 @@
+{
+  "locale": "Español",
+  "team": "EQUIPO",
+  "team.title.text": "Estamos haciendo más que un proyecto. Nosotr@ estamos creando nuestro futuro.",
+  "team.subtitle.text": 
+  "Reunimos a nuestro alrededor  personas talentosas, dedicadas  y con un gran corazón. Continuaremos haciéndolo pasa lo que pase.",
+
+  "befree": "SE LIBRE",
+  "befree.phrase": "Se libre",
+
+  "casting": "FUNDICIÓN",
+  "casting.title": "UNETE A NUESTRO",
+  "casting.title.blue": "EQUIPO DE FÚTBOL",
+  "casting.text.one": 
+  "Todo los chicos mayores de 18 años puede participar en el casting. Cualquier que presente una solicitud será invitado a un casting presencial en Barcelona, España.",
+  "casting.text.two": 
+  "Complete la solicitud antes del 15 de enero de 2021 y definitivamente nos comunicaremos con usted para fijar una fecha  de reunión.",
+  "casting.text.three": "Adjunte un enlace a su vídeo de instagram no mas de 1 minuto.  En este video queremos ver tu respuesta a esta pregunta (¿Qué significa el fútbol para ti?) ",
+  "casting.text.four": " P.D. Tienes que tag @casalli” es necesario",
+  "casting.text.five": "* Tu cuenta de instagram debe estar abierta mientras dure el casting.",
+
+  "casting.steps.title": " To participate in the casting, you must complete 3 steps:",
+  "casting.steps.text.one": "Record a video where you answer our questions and complete the assignment.",
+  "casting.steps.text.two": "Upload this video to at least 2 of any social online platforms. We advise you to use the social networks and / or online platforms where you have the most friends. For example, you can use the following combinations: YouTube + Instagram, YouTube + Facebook, YouTube + TikTok, Vimeo + Instagram… or use any two other social platforms.",
+  "casting.steps.text.three": "Fill out an application by attaching 2 links to this video. It is important that accounts are open and videos are public. Attention! Do not delete these videos until the casting is complete.",
+  "casting.moreInfo.videoReq.title": "Video requirements:",
+  "casting.moreInfo.videoReq.one": "1. The video should be NO LONGER than 5 minutes.",
+  "casting.moreInfo.videoReq.two": "2. The video should include answering questions and completing assignments.",
+  "casting.moreInfo.videoReq.three": "3. In the description for the video, please write the text that you will say on the video.This will help us understand you if you use any language other than English. There is no need to invent anything, just duplicate with text everything that you said in the video. You can use any language.",
+  "casting.moreInfo.videoReq.four": "4. We do not impose any requirements on the quality of the video, the main thing is that we can see and hear you :)",
+  "casting.moreInfo.videoContent.title": "Required video content:",
+  "casting.moreInfo.videoContent.one": "1. Introduce yourself (Name and Surname)",
+  "casting.moreInfo.videoContent.two": "2. Tell us which country you are from",
+  "casting.moreInfo.videoContent.three": "3. Tell us why you are participating in the casting. (For example, you shoot a video for our casting to get into the world soccer team)",
+  "casting.moreInfo.videoContent.four": "4. Answer the question. What does football mean to you?",
+  "casting.moreInfo.videoContent.five": "5. Complete technical tasks: Attention! For goalkeepers and everyone else, the tasks are different.",
+  "casting.moreInfo.goalkeeper.title": "If you consider yourself a goalkeeper: You can choose any 1 tasks or more",
+  "casting.moreInfo.goalkeeper.one": "1. The goalkeeper should protecting the goal closely from a player (short shootings)",
+  "casting.moreInfo.goalkeeper.two": "2. You must protect the ball from the players, while a player shot a corner",
+  "casting.moreInfo.goalkeeper.three": "3. Free kicks shots (You needs a player to shot the ball far away from you, more that 20m)",
+  "casting.moreInfo.goalkeeper.four": "4. Absolute freedom. Here you can show whatever you think is necessary. Show your best football side.",
+  "casting.moreInfo.soccer.title": "If you are not a goalkeeper: You can choose any 1 tasks or more",
+  "casting.moreInfo.soccer.one": "1. Dribble Test (Right & Left) - One time right foot only, one time left foot only.",
+  "casting.moreInfo.soccer.two": "2. Juggling Test - You need to get as many juggles as possible using feet, thighs and head only.",
+  "casting.moreInfo.soccer.three": "3. Running with Ball - You need to run as quick as they can while keeping the ball under control.",
+  "casting.moreInfo.soccer.four": "4. Absolute freedom. Here you can show whatever you think is necessary. Show your best football side.",
+
+
+
+  "contacts": "CONTACTOS",
+  "contacts.title": "CON NOSOTROS",
+  "contacts.title.blue": "CONECTATE",
+  "contacts.text": "Puede contactarnos para cualquier pregunta, incluida la cooperación.",
+
+  "donate": "DONAR Donar",
+  "donate.title": "SI PUEDES Y SI QUIERES",
+  "donate.text.one": 
+  "Somos chicos sencillos de diferentes países, unidos para hacer algo grande.",
+  "donate.text.two": "Si te gusta nuestra idea, lo que hacemos o lo que buscamos, puede apoyarnos.",
+  "donate.text.three": "P.D. Por favor, no envíe dinero si participa en el casting.",
+  "donate.text.four": 
+  "Todas las etapas del casting son absolutamente gratuitas y no requieren nada de ti excepto deseo y trabajo en ti mismo.",
+
+  "joinTheTeam": "UNETE AL EQUIPO",
+  "joinTheTeam.title": "UNETE A NUESTRO",
+  "joinTheTeam.title.blue": "EQUIPO CREATIVO",
+  "joinTheTeam.text.one": "Siempre estamos en busca de talento.",
+  "joinTheTeam.text.two": 
+  "Programadores, operadores, videografos, diseñadores, traductores, ingenieros de sonidos, comercializadores, preparadores físicos, nutricionistas, entrenadores,médicos.. y muchos otros.",
+  "joinTheTeam.text.three": 
+  "Envíe sus solicitudes para formar parte de nuestro equipo y definitivamente nos pondremos en contacto con usted.",
+
+  "follow": "SEGUIR",
+  "follow.title.blue": "SIGUE",
+  "follow.title": "NUESTRAS NOTICIA",
+
+  "name": "NOMBRE",
+  "surname": "APELLIDO",
+  "phone": "TELEFONO",
+  "link.video": "ENLACE AL VIDEO",
+  "link.video.instagram": "ENLACE AL VIDEO DESDE INSTAGRAM",
+  "link.summary": "ENLACE AL RESUMEN",
+  "transmittalLater": "CARTA DE ENVIO",
+  "email": "CORREO ELECTRÓNICO",
+  "send": "ENVIAR"
+}

@@ -1,0 +1,29 @@
+@import '../../UI/style.scss';
+
+.spinner_wrap {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border-top: 6px solid $blue;
+  border-bottom: 6px solid $darkGrey;
+  border-right: 6px solid $grey;
+  border-left: 6px solid $lightGrey;
+  
+  animation: spinner 1s infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
