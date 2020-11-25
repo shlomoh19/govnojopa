@@ -117,3 +117,16 @@
 @media (max-width: 650px) {
 
 }
+
+// HLS
+
+.video-hls_wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.video-hls {
+  box-shadow: $boxShadow;
+  outline: none;
+  border-radius: 40px;
+}

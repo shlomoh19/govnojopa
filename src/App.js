@@ -1,20 +1,25 @@
-import React, { useState } from 'react';
+import React, { lazy, Suspense, useCallback, useState } from 'react';
 import Header from "./components/header/Header";
 import { Route } from "react-router-dom";
 import Home from "./components/home/Home";
 import Footer from "./components/footer/Footer";
 import MobileMenu from './components/mobile-menu/Mobile-menu';
-import BeFree from './components/be-free/Be-free';
 import Contacts from './components/contacts/Contacts';
-import './App.scss';
 import CastingPage from "./components/casting/Casting-page";
+import Spinner from './components/spinner/Spinner';
+import BefreeSkeleton from './components/be-free/be-free-skeleton';
+import './App.scss';
+
+
+
+const BefreeLazy = lazy(() => import('./components/be-free/Be-free'))
 
 
 function App() {
     const [mobileMenu, setMobileMenu] = useState(false)
-    const [openLocaleMenu, setOpenLocaleMenu] = useState(false)
+    const [done, setDone] = useState(false)
 
-    const mobileMenuHandler = () => setMobileMenu(!mobileMenu)
+    const mobileMenuHandler = useCallback(() => setMobileMenu(!mobileMenu), [mobileMenu])
 
     const menuActive = {
         opacity: "1",
@@ -27,10 +32,9 @@ function App() {
     }
 
     return (
+        <Suspense fallback={<Spinner />}>
             <div className={mobileMenu ? "App Open-menu-body" : "App"}>
                 <Header
-                    setOpenLocaleMenu={setOpenLocaleMenu}
-                    openLocaleMenu={openLocaleMenu}
                     mobileMenuHandler={mobileMenuHandler}
                     mobileMenu={mobileMenu}
                 />
@@ -38,12 +42,19 @@ function App() {
                 <div className="content-wrapper">
                     <div onClick={mobileMenuHandler} style={mobileMenu ? menuActive : menuUnActive} className="Open-menu-content" />
                     <Route exact path="/" component={Home} />
-                    <Route path="/befree/:id" component={BeFree} />
-                    <Route path="/contacts" component={Contacts} />
-                    <Route path="/casting" component={CastingPage} />
+                    <Route path="/befree/:id" render={() => {
+                        return (
+                            <Suspense fallback={<BefreeSkeleton />}>
+                                <BefreeLazy done={done} setDone={setDone} />
+                            </Suspense>
+                        )
+                    }} />
+                    <Route path="/contacts" render={() => <Contacts done={done} setDone={setDone} />} />
+                    <Route path="/casting" render={() => <CastingPage done={done} setDone={setDone} />} />
                 </div>
                 <Footer />
             </div>
+        </Suspense>
     );
 }
 

@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import $ from "jquery";
 import './Video.scss'
 
 
-const VideoWrapper = ({video, title}) => {
+const VideoWrapper = ({ video, title }) => {
     const [controlsIsOpen, setControlsIsOpen] = useState(false);
     const [controlsWillOpen, setControlsWillOpen] = useState(false);
     const [controlsIsClose, setControlsIsClose] = useState(false);
@@ -101,37 +101,37 @@ const VideoWrapper = ({video, title}) => {
     }
 
     return (
-            <div className="video-wrapper" >
-                <video
+        <div className="video-wrapper" >
+            <video
                     orange={'orange'}
                     onMouseOver={onControlsOpen}
                     id={`video${title}`}
                     className="video"
-                    src={video}
+                    src='https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8'
                     onClick={playPauseVideo}
                 />
-                <div orange={'orange'} className={controlsStyles}>
+            <div orange={'orange'} className={controlsStyles}>
+                <div
+                    id={`orangeBar${title}`}
+                    orange={'orange'}
+                    className={"orange-bar"}
+                >
                     <div
-                        id={`orangeBar${title}`}
                         orange={'orange'}
-                        className={"orange-bar"}
-                    >
-                        <div
-                            orange={'orange'}
-                            style={timeUpdate ? {width: timeUpdate} : {width: '0%'}}
-                            className="orange-juice"
-                        />
-                    </div>
-                    <div orange={'orange'} className={controlsIsOpen ? "buttons buttons-active" : "buttons"}>
-                        <button
-                            onClick={playPauseVideo}
-                            orange={'orange'}
-                            id={`play-pause${title}`}
-                            className={play ? "play-pause pause" : "play-pause play"}
-                        />
-                    </div>
+                        style={timeUpdate ? { width: timeUpdate } : { width: '0%' }}
+                        className="orange-juice"
+                    />
+                </div>
+                <div orange={'orange'} className={controlsIsOpen ? "buttons buttons-active" : "buttons"}>
+                    <button
+                        onClick={playPauseVideo}
+                        orange={'orange'}
+                        id={`play-pause${title}`}
+                        className={play ? "play-pause pause" : "play-pause play"}
+                    />
                 </div>
             </div>
+        </div>
     );
 };
 

@@ -15,7 +15,6 @@ import '../../../components/be-free/components/join/JoinTheTeam.scss'
 const CastingForm = ({ setDone }) => {
     const [form, setForm] = useState({
         name: '',
-        birthday: '',
         email: '',
         phone: '',
         link: '',
@@ -39,43 +38,38 @@ const CastingForm = ({ setDone }) => {
     const toggleIsAgree = () => setIsAgree(!isAgree)
 
     useEffect(() => {
-        const { name, birthday, email, phone, link, about, surname } = form
+        const { name, email, phone, link, about, surname } = form
         if (
             name.trim().length &&
             email.trim().length &&
-            birthday.trim().length &&
             phone.length &&
             link.trim().length &&
             about.trim().length &&
             surname.trim().length &&
             isAgree
         ) {
-            console.log(true)
             setCanSend(true)
         } else {
-            console.log(false)
             setCanSend(false)
         }
     }, [form, isAgree])
 
 
-    const changeHandler = e => {
-        console.log('dasdasads')
-        setForm({ ...form, [e.target.name]: e.target.value })
-    }
+    const changeHandler = e => setForm({ ...form, [e.target.name]: e.target.value })
+
     const phoneChange = value => setForm({ ...form, phone: value })
 
     return (
         <>
             <div className="casting_form-wrapper">
                 <div className="befree-col casting__c-1">
-                    <Input name={t('name')} placeholder={t('name')} changeHandler={changeHandler} />
-                    <Input name={t('surname')} placeholder={t('surname')} changeHandler={changeHandler} />
-                    <Input name={t('email')} placeholder={t('email')} changeHandler={changeHandler} />
-                    <PhoneField />
+                    <Input name="name" placeholder={t('name')} changeHandler={changeHandler} />
+                    <Input name="surname" placeholder={t('surname')} changeHandler={changeHandler} />
+                    <Input name="email" placeholder={t('email')} changeHandler={changeHandler} />
+                    <PhoneField changeHandler={phoneChange} phoneValue={form.phone} />
                 </div>
                 <div className="befree-col casting__c-2">
-                    <LongInput name={t('link.video')} placeholder={t('link.video')} changeHandler={changeHandler} />
+                    <LongInput name="link" placeholder={t('link.video')} changeHandler={changeHandler} />
                     <Textarea name="about" placeholder={t('transmittalLater')} changeHandler={changeHandler} />
                 </div>
             </div>
@@ -84,7 +78,7 @@ const CastingForm = ({ setDone }) => {
                 By completing this application, you consent to us using, editing and transferring your data.
             </div>
             <input type="checkbox" className="custom-checkbox" id="accept" />
-            <label onClick={toggleIsAgree} htmlFor="accept">I accept the terms</label>
+            <label onClick={toggleIsAgree} htmlFor="accept"> {t('casting.checkbox')} </label>
             {loading ? <Spinner /> : <Button onClick={sendForm} disabled={!canSend} title={t('send')} />}
         </>
     )

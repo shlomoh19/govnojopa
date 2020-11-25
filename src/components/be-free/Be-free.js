@@ -6,17 +6,15 @@ import Donate from "./components/donate/Donate";
 import JoinTheTeam from './components/join/JoinTheTeam'
 import VideoWrapper from '../home/video/Video';
 import DonePage from '../done/Done';
-import { translate } from 'react-polyglot';
 import videoSrc from '../../video/Lilit-casting.mp4'
 import title from '../../video/Lilit-img.jpg'
 import './Be-free.scss'
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
-function BeFree() {
+function BeFree({ done, setDone }) {
   const [borderActiveMarginLeft, setBorderActiveMarginLeft] = useState(0)
-  const [done, setDone] = useState(false)
 
-  const {t} = useTranslation()
+  const { t } = useTranslation()
 
   const styles = {
     left: `${borderActiveMarginLeft}%`

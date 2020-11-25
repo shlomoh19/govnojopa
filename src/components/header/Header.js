@@ -1,17 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from "react-router-dom";
 import LocaleMenu from '../locale-menu/Locale-menu';
-import {useTranslation} from "react-i18next";
-import {setCookiesLocale} from "../../utils/cookies";
+import { useTranslation } from "react-i18next";
+import { setCookiesLocale } from "../../utils/cookies";
 import './Header.scss'
 
-const Header = ({ mobileMenuHandler, mobileMenu, openLocaleMenu, setOpenLocaleMenu }) => {
-    const {t, i18n} = useTranslation()
+const Header = ({ mobileMenuHandler, mobileMenu }) => {
+    const [openLocaleMenu, setOpenLocaleMenu] = useState(false)
+
+    const { t, i18n } = useTranslation()
 
     const changeLanguage = language => {
         i18n.changeLanguage(language)
         setCookiesLocale(language)
     }
+
+    const toggleLocaleMenu = () => setOpenLocaleMenu(!openLocaleMenu)
+    
     return (
         <header className="header">
             <div className="header__logo-wrapper">L.</div>
@@ -30,10 +35,10 @@ const Header = ({ mobileMenuHandler, mobileMenu, openLocaleMenu, setOpenLocaleMe
                     {t('contacts')}
                 </NavLink>
             </div>
-            <div style={{ position: 'relative' }} onClick={() => setOpenLocaleMenu(!openLocaleMenu)}>
+            <div className="locale__wrapper" onClick={toggleLocaleMenu}>
                 <div className="locale__label">
                     {t('locale')}
-                <i style={openLocaleMenu ? { transform: 'rotate(180deg)' } : null} className="fas fa-angle-down icon-arr" />
+                    <i style={openLocaleMenu ? { transform: 'rotate(180deg)' } : null} className="fas fa-angle-down icon-arr" />
                 </div>
                 <LocaleMenu setLocale={changeLanguage} openLocaleMenu={openLocaleMenu} />
             </div>

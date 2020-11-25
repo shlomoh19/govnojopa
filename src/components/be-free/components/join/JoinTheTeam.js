@@ -3,12 +3,12 @@ import Button from '../../../../UI/components/button/Button'
 import Input from '../../../../UI/components/input/Input'
 import Textarea from '../../../../UI/components/textarea/Textarea'
 import LongInput from '../../../../UI/components/long-input/Long-input'
-import PhoneField from '../../../../UI/components/phone/Phone'
+import PhoneInput from '../../../../UI/components/phone/PhoneInput'
 import './JoinTheTeam.scss'
 import { useHttp } from '../../../../hooks/hook.http'
 import Spinner from '../../../spinner/Spinner'
-import { translate } from 'react-polyglot'
-import {useTranslation} from "react-i18next";
+import {useTranslation} from "react-i18next"
+import '../casting/Casting.scss'
 
 
 const JoinTheTeam = ({ setDone }) => {
@@ -67,9 +67,7 @@ const JoinTheTeam = ({ setDone }) => {
         <div className="befree-col casting__c-1">
           <Input name="name" placeholder={t('name')} changeHandler={changeHandler} />
           <Input name="email" placeholder={t('email')} changeHandler={changeHandler} />
-          <span className="join__phone">
-            <PhoneField onChange={phoneChange} />
-          </span>
+          <PhoneInput phoneValue={form.phone} changeHandler={phoneChange} />
           <Input name="link" placeholder="LINK TO PORTFOLIO" changeHandler={changeHandler} />
         </div>
         <div className="befree-col casting__c-2">

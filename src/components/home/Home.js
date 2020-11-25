@@ -1,13 +1,12 @@
 import React from 'react'
-import VideoWrapper from "./video/Video";
 import Team from "./team/Team";
 import './Home.scss'
-import videoTeam from '../../video/team.mp4'
-import titleImg from '../../video/image.jpg'
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
+import VideoHLS from './video/VideoHLS';
+import HomeSkeleton from './Home-skeleton';
 
 const Home = () => {
-    const {t} = useTranslation()
+    const { t } = useTranslation()
     return (
         <div className="home_page">
             <div className="home__title">
@@ -16,9 +15,9 @@ const Home = () => {
                     {t('team.title.text')}
                 </div>
             </div>
-            <VideoWrapper video={videoTeam} title={titleImg} />
+            <VideoHLS title="team" />
             <div className="home__title"> {t('team.subtitle.text')} </div>
-            <Team/>
+            <Team />
         </div>
     )
 }

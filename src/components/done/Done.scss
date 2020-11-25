@@ -1,11 +1,23 @@
 @import '../../UI/style.scss';
 
 .done {
-  color: $grey;
   text-align: center;
   margin-top: 30px;
-  .done__icon {
-    color: green;
-    font-size: 50px;
+  width: 100%;
+  max-height: 100vh;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .done_title {
+    color: $green;
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .done_text {
+    color: $blue;
+    font-size: 14px;
+    font-weight: 400;
   }
 }

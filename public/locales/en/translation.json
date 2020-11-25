@@ -18,10 +18,19 @@
   "casting.text.three": "Hurry up to submit your application before February 28, 2021.",
   "casting.text.four": "Use English to complete your application.",
   "casting.text.five": "",
+  "casting.already.registred": "ALREADY REGISTERED",
+  "casting.untilTheEnd": "UNTIL THE END OF THE REGISTRATION",
+
   "casting.steps.title": " To participate in the casting, you must complete 3 steps:",
+  "casting.steps.nums": {
+    "one": "Step 1.",
+    "two": "Step 2.",
+    "three": "Step 3."
+  },
   "casting.steps.text.one": "Record a video where you answer our questions and complete the assignment.",
   "casting.steps.text.two": "Upload this video to at least 2 of any social online platforms. We advise you to use the social networks and / or online platforms where you have the most friends. For example, you can use the following combinations: YouTube + Instagram, YouTube + Facebook, YouTube + TikTok, Vimeo + Instagram… or use any two other social platforms.",
   "casting.steps.text.three": "Fill out an application by attaching 2 links to this video. It is important that accounts are open and videos are public. Attention! Do not delete these videos until the casting is complete.",
+  "casting.moreInfo.text": "More information",
   "casting.moreInfo.videoReq.title": "Video requirements:",
   "casting.moreInfo.videoReq.one": "1. The video should be NO LONGER than 5 minutes.",
   "casting.moreInfo.videoReq.two": "2. The video should include answering questions and completing assignments.",
@@ -43,6 +52,8 @@
   "casting.moreInfo.soccer.two": "2. Juggling Test - You need to get as many juggles as possible using feet, thighs and head only.",
   "casting.moreInfo.soccer.three": "3. Running with Ball - You need to run as quick as they can while keeping the ball under control.",
   "casting.moreInfo.soccer.four": "4. Absolute freedom. Here you can show whatever you think is necessary. Show your best football side.",
+  "casting.page.end": "* International social project. All stages of participation in the casting are absolutely free. By completing this application, you consent to us using, editing and transferring your data.",
+  "casting.checkbox": "I accept the terms",
 
 
 
@@ -81,5 +92,8 @@
   "link.summary": "LINK TO SUMMARY",
   "transmittalLater": "TRANSMITTAL LETTER",
   "email": "EMAIL",
-  "send": "SEND"
+  "send": "SEND",
+  "days": " Days",
+  "hours": "Hours",
+  "not.now": "PAS MAINTENANT"
 }

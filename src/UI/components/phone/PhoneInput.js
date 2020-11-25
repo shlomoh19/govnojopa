@@ -1,28 +1,23 @@
-import React, {  useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import './PhoneInput.scss'
 
-const PhoneField = () => {
+const PhoneField = ({ changeHandler, phoneValue }) => {
     const [phoneState, setPhoneState] = useState({
         flagImg: 'https://flagpedia.net/data/flags/h80/us.webp',
-        codeValue: 1,
-        phone: ''
+        codeValue: 1
     });
 
     const countrySelect = useRef();
 
-    const phoneHandler = e => 
-        setPhoneState({
-            ...phoneState,
-            phone: e.target.value
-        })
-    
+    const phoneHandler = e => changeHandler('+' + phoneState.codeValue + e.target.value)
+
 
     const countryFlagHandler = e => {
         setPhoneState({
             ...phoneState,
             flagImg: `https://flagpedia.net/data/flags/h80/${countrySelect.current.selectedOptions[0].dataset.countrycode.toLowerCase()}.webp`,
             codeValue: e.target.value
-        }); 
+        });
     }
 
     return (
@@ -776,7 +771,7 @@ const PhoneField = () => {
                         placeholder="PHONE"
                         className="tel"
                         onChange={phoneHandler}
-                        defaultValue={phoneState.phone}
+                        defaultValue={phoneValue}
                     />
                 </div>
             </div>
