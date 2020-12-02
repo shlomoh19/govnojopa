@@ -1,5 +1,6 @@
 import React from 'react'
 import Skeleton from 'react-loading-skeleton';
+import BefreeFormSkeleton from './Be-free-form-skeleton';
 import './befree-skeleton.scss'
 
 
@@ -11,18 +12,7 @@ const BefreeSkeleton = () => {
                 <Skeleton height={50} />
             </header>
             <Skeleton className="skeleton-title" height={30} />
-            <div className="casting_form-wrapper">
-                <div className="befree-col casting__c-1">
-                    <Skeleton height={70} width={300} />
-                    <Skeleton height={70} width={300} />
-                    <Skeleton height={70} width={300} />
-                    <Skeleton height={70} width={300} />
-                </div>
-                <div className="befree-col casting__c-2">
-                    <Skeleton height={70} width={300} />
-                    <Skeleton height={215} width={300} />
-                </div>
-            </div>
+            <BefreeFormSkeleton />
             <Skeleton height={70} style={{marginTop: '50px'}} />
             <Skeleton height={70} />
         </div>

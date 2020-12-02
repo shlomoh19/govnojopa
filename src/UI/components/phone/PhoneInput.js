@@ -1,15 +1,26 @@
 import React, { useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next';
 import './PhoneInput.scss'
 
-const PhoneField = ({ changeHandler, phoneValue }) => {
+const PhoneField = ({ changeHandler }) => {
     const [phoneState, setPhoneState] = useState({
         flagImg: 'https://flagpedia.net/data/flags/h80/us.webp',
-        codeValue: 1
+        codeValue: 1,
+        value: ''
     });
+
+    const validPhone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+
+    const { t } = useTranslation()
 
     const countrySelect = useRef();
 
-    const phoneHandler = e => changeHandler('+' + phoneState.codeValue + e.target.value)
+    const phoneHandler = e => {
+        const isValid = validPhone.some(num => num == e.target.value.slice(-1))
+        if (!isValid) return
+        setPhoneState({...phoneState, value: e.target.value})
+        changeHandler('+' + phoneState.codeValue + e.target.value)
+    }
 
 
     const countryFlagHandler = e => {
@@ -768,10 +779,10 @@ const PhoneField = ({ changeHandler, phoneValue }) => {
                     <div className="default_value"> {'+' + phoneState.codeValue}</div>
                     <input
                         type="tel"
-                        placeholder="PHONE"
+                        placeholder={t('phone')}
                         className="tel"
                         onChange={phoneHandler}
-                        defaultValue={phoneValue}
+                        value={phoneState.value}
                     />
                 </div>
             </div>

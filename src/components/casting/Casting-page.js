@@ -1,22 +1,27 @@
 import React, { useEffect, useState } from 'react'
-import './Casting-page.scss'
-
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
 import moment from "moment";
 import CastingInfo from "../../UI/components/more-info-casting/more-info.casting";
-import 'swiper/swiper-bundle.min.css'
-
-
-import Video from '../../video/rocky.webm'
-import VideoWrapper from "../home/video/Video";
 import CastingForm from "../../UI/components/casting-form/casting-form";
 import DonePage from '../done/Done';
+import { useTranslation } from 'react-i18next';
+import { useHttp } from '../../hooks/hook.http';
+import SimpleVideo from '../home/video/Simple-video';
+
+import './Casting-page.scss'
+import 'react-circular-progressbar/dist/styles.css';
+import 'swiper/swiper-bundle.min.css'
 
 const CastingPage = ({ done, setDone }) => {
     const [percent, setPercent] = useState(0)
     const [daysToEnd, setDaysToEnd] = useState(0)
     const [hoursToEnd, setHoursToEnd] = useState(0)
+
+    const [alreadyRegistered, setAlreadyRegistered] = useState(0)
+
+    const { t } = useTranslation()
+
+    const { request } = useHttp()
 
     useEffect(() => {
         const castingStartDay = moment('2020-10-1');
@@ -28,19 +33,22 @@ const CastingPage = ({ done, setDone }) => {
         setDaysToEnd(Math.round(daysToEnd));
         setHoursToEnd(Math.round(hoursToEnd));
         const durationAllDays = moment.duration(end.diff(castingStartDay)).asDays();
-        const complatePercent = 100 - (daysToEnd * 100 / durationAllDays);
-        setPercent(complatePercent)
+        const completePercent = 100 - (daysToEnd * 100 / durationAllDays);
+        setPercent(completePercent)
+
+        request('http://localhost:8000/casting/total').then(res => setAlreadyRegistered(res.count))
     }, []);
+
 
     return (
         <>
             {done
                 ? <DonePage />
                 : <>
-                    <VideoWrapper video={Video} />
+                    <SimpleVideo videoURL="http://localhost:8000/Get/casting/video" title="casting-page" />
                     <div style={{ textAlign: 'center' }}>
-                        <h2>23 458</h2>
-                        <span>Already registered</span>
+                        <h2 style={{ fontWeight: '400', fontSize: '30px' }}> {alreadyRegistered} </h2>
+                        <span> {t('casting.already.registred')} </span>
                         <div className={"circle-flex"}>
                             <div className={'circle-item'}>
                                 <CircularProgressbar
@@ -53,7 +61,7 @@ const CastingPage = ({ done, setDone }) => {
                                         pathColor: '#384786'
                                     })}
                                 />
-                                <span>days</span>
+                                <span> {t('days')} </span>
                             </div>
                             <div className={'circle-item'}>
                                 <CircularProgressbar
@@ -66,7 +74,7 @@ const CastingPage = ({ done, setDone }) => {
                                         pathColor: '#384786'
                                     })}
                                 />
-                                <span>hours</span>
+                                <span> {t('hours')} </span>
                             </div>
                         </div>
                     </div>

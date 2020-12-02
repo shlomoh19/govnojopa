@@ -75,6 +75,16 @@
   border: 1px solid transparent;
 }
 
+.team__item-contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
+
 .fa-angle-down {
   transition: all .2s;
 }

@@ -2,8 +2,8 @@ import React from 'react'
 import Team from "./team/Team";
 import './Home.scss'
 import { useTranslation } from "react-i18next";
-import VideoHLS from './video/VideoHLS';
-import HomeSkeleton from './Home-skeleton';
+import SimpleVideo from './video/Simple-video';
+import TeamImage from '../../files/TeamPicture.jpg'
 
 const Home = () => {
     const { t } = useTranslation()
@@ -15,7 +15,11 @@ const Home = () => {
                     {t('team.title.text')}
                 </div>
             </div>
-            <VideoHLS title="team" />
+            <SimpleVideo
+                title="team"
+                videoURL="http://localhost:8000/Get/Team/Video" picture
+                image={TeamImage}
+            />
             <div className="home__title"> {t('team.subtitle.text')} </div>
             <Team />
         </div>

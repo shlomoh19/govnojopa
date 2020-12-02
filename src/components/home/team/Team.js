@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import InstaIcon from '../../../img/inst-icon.png'
-import YoutubeIcon from '../../../img/youtube-icon.png'
-import Founder from '../../../video/Lilit.mp4'
-import FounderImg from '../../../video/pic/Lilit.jpg'
+import Founder from '../../../files/team/Lilit_founder.mp4'
+import FounderImg from '../../../files/team/images/Lilit_founder.jpg'
 import People from './People'
+import InstagramIcon from '../../../UI/icons/InstagramIcon'
 import './Team.scss'
+import YoutubeIcon from '../../../UI/icons/YoutubeIcon'
+import FacebookIcon from '../../../UI/icons/FacebookIcon'
 
 export default function () {
     const [openTeam, setOpen] = useState(false)
@@ -31,8 +32,9 @@ export default function () {
                     <span className="team__item-position">FOUNDER</span>
                     <span className="team__item-name">Lilit Unanyan</span>
                     <div className="team__item-contacts">
-                        <img src={InstaIcon} alt="sorry bro :'(" className="team__item-instagram" />
-                        <img src={YoutubeIcon} alt="sorry bro :'(" className="team__item-youtube" />
+                        <InstagramIcon href="https://www.instagram.com/casadelili/" />
+                        <YoutubeIcon href="https://www.youtube.com/channel/UCAZFH1xkBWGn5EbbGuqYcGA" />
+                        <FacebookIcon href="https://www.facebook.com/casadelilit" />
                     </div>
                 </div>
             </div>

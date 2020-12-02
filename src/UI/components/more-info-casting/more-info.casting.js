@@ -67,7 +67,7 @@ const CastingInfo = () => {
                 </div>
             </div>
             <p className={"casting_more-info"} onClick={toggleMoreInfo}>
-                <span> {isOpenMoreInfo ? 'HIDE' : 'MORE INFORMATION'} </span>
+                <span> {isOpenMoreInfo ? 'HIDE' : t('casting.moreInfo.text')} </span>
                 <i
                     style={isOpenMoreInfo
                         ? { color: 'grey', marginLeft: '10px', transform: 'rotate(180deg)' }

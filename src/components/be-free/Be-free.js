@@ -4,12 +4,10 @@ import Follow from './components/follow/Follow'
 import Casting from './components/casting/Casting'
 import Donate from "./components/donate/Donate";
 import JoinTheTeam from './components/join/JoinTheTeam'
-import VideoWrapper from '../home/video/Video';
 import DonePage from '../done/Done';
-import videoSrc from '../../video/Lilit-casting.mp4'
-import title from '../../video/Lilit-img.jpg'
 import './Be-free.scss'
 import { useTranslation } from "react-i18next";
+import SimpleVideo from '../home/video/Simple-video';
 
 function BeFree({ done, setDone }) {
   const [borderActiveMarginLeft, setBorderActiveMarginLeft] = useState(0)
@@ -32,7 +30,7 @@ function BeFree({ done, setDone }) {
 
   return (
     <div className="befree">
-      <VideoWrapper video={videoSrc} title={title} />
+      <SimpleVideo videoURL="http://localhost:8000/Get/casting/video" title="casting" />
       <header className="befree__header">
         <NavLink
           onClick={setBorderFollow} className="befree__header-item" to="/befree/follow">

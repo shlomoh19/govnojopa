@@ -5,16 +5,16 @@ import Home from "./components/home/Home";
 import Footer from "./components/footer/Footer";
 import MobileMenu from './components/mobile-menu/Mobile-menu';
 import Contacts from './components/contacts/Contacts';
-import CastingPage from "./components/casting/Casting-page";
 import Spinner from './components/spinner/Spinner';
 import BefreeSkeleton from './components/be-free/be-free-skeleton';
+import CastingSkeleton from './components/casting/CastingSkeleton';
 import './App.scss';
 
 
 
 const BefreeLazy = lazy(() => import('./components/be-free/Be-free'))
-
-
+const CastingPageLazy = lazy(() => import('./components/casting/Casting-page'))
+   
 function App() {
     const [mobileMenu, setMobileMenu] = useState(false)
     const [done, setDone] = useState(false)
@@ -50,7 +50,14 @@ function App() {
                         )
                     }} />
                     <Route path="/contacts" render={() => <Contacts done={done} setDone={setDone} />} />
-                    <Route path="/casting" render={() => <CastingPage done={done} setDone={setDone} />} />
+
+                    <Route path="/casting" render={() => {
+                        return (
+                            <Suspense fallback={<CastingSkeleton />}>
+                                <CastingPageLazy done={done} setDone={setDone} />
+                            </Suspense>
+                        )
+                    }} />
                 </div>
                 <Footer />
             </div>

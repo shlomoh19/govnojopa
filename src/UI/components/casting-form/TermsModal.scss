@@ -1,0 +1,120 @@
+@import '../../style.scss';
+
+.terms_wrapper {
+    position: fixed;
+    max-width: 700px;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) translateY(0px);
+    background-color: white;
+    z-index: 999;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    opacity: 1;
+    transition: all .2s ease-in;
+    padding: 10px;
+    animation: mountTermsModal ease-in .2s;
+}
+
+.terms_wrapper-open {
+    opacity: 1;
+}
+
+.terms_content {
+    max-height: 500px;
+    overflow-y: scroll;
+    padding: 20px 50px 20px 50px;
+    .terms_text {
+        font-size: 18px;
+    }
+}
+
+.terms_title {
+    font-weight: 400;
+    color: $black;
+}
+
+.terms_wrapper-title-name {
+    margin-left: 50px;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.terms_wrapper-title {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $grey;
+    margin-bottom: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    .x-icon {
+        font-size: 20px;
+        color: $blue;
+        margin-right: 20px;
+        padding: 5px 10px 5px 10px;
+        border: 1px solid $blue;
+        cursor: pointer;
+        transition: all ease-in .2s;
+        &:hover {
+            background: $blue;
+            color: white;
+        }
+    }
+}
+
+.terms_footer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $grey;
+    margin-top: 10px;
+    padding-top: 10px;
+    .terms_button {
+        border: none;
+        outline: none;
+        background: none;
+        cursor: pointer;
+        padding: 10px 15px 10px 15px;
+        border: 1px solid $blue;
+        transition: transform ease-in .2s;
+        background-color: $blue;
+        color: white;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.terms_content::-webkit-scrollbar {
+    width: 7px;
+}
+
+.terms_content::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.terms_content::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid grey;
+}
+
+@keyframes mountTermsModal {
+    0% {transform: translate(-50%, -50%) translateY(50px);}
+    100% {transform: translate(-50%, -50%) translateY(0px);}
+}
+
+@media (max-width: 1000px) {
+    .terms_wrapper {
+        width: 90%;
+    }
+    .terms_title {
+        font-size: 20px;
+    }
+    .terms_text {
+        font-size: 16px;
+    }
+}
