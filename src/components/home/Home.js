@@ -17,7 +17,7 @@ const Home = () => {
             </div>
             <SimpleVideo
                 title="team"
-                videoURL="http://localhost:8000/Get/Team/Video" picture
+                videoURL="http://lbefree.com/storage/casting/team-video.mp4" picture
                 image={TeamImage}
             />
             <div className="home__title"> {t('team.subtitle.text')} </div>

@@ -27,7 +27,7 @@ function Follow({ setDone }) {
   const { request, loading } = useHttp()
 
   const sendForm = async () => {
-    const response = await request('/subscribe', 'POST', form)
+    const response = await request('http://lbefree.com/api/casting/subscribe', 'POST', form)
     if (response.ok) {
       setDone(true)
     }

@@ -47,7 +47,7 @@ const JoinTheTeam = ({ setDone }) => {
   const phoneChange = value => setForm({ ...form, phone: value })
 
   const sendForm = async () => {
-    const response = await request('/join/team/', 'POST', form)
+    const response = await request('http://lbefree.com/api/casting/team', 'POST', form)
     if (response.ok) {
       setDone(true)
     }

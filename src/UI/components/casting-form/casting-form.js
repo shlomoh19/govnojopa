@@ -49,7 +49,7 @@ const CastingForm = ({ setDone }) => {
     }
 
     const sendForm = async () => {
-        const response = await request('/join/casting/', 'POST', form)
+        const response = await request('http://lbefree.com/api/casting/new', 'POST', form)
         if (response.ok) {
             setDone(true)
         }

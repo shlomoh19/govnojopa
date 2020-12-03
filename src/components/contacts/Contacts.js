@@ -48,7 +48,7 @@ const Contacts = ({ done, setDone }) => {
   const changeHandler = e => setForm({ ...form, [e.target.name]: e.target.value })
 
   const sendForm = async () => {
-    const response = await request('/feedback', 'POST', form)
+    const response = await request('http://lbefree.com/api/casting/feedback', 'POST', form)
     if (response.ok) {
       setDone(true)
     }

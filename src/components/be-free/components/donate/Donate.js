@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './Donate.scss'
 import Input from "../../../../UI/components/input/Input";
 import TextArea from "../../../../UI/components/textarea/Textarea";
-import PhoneField from "../../../../UI/components/phone/Phone";
 
 const Donate = () => {
     const [form, setForm] = useState({
