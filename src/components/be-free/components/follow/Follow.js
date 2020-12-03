@@ -28,8 +28,9 @@ function Follow({ setDone }) {
 
   const sendForm = async () => {
     const response = await request('http://lbefree.com/api/casting/subscribe', 'POST', form)
-    if (response.ok) {
+    if (response.status) {
       setDone(true)
+      setTimeout(() => setDone(false), 3000)
     }
   }
 

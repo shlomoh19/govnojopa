@@ -14,11 +14,11 @@ import '../casting/Casting.scss'
 const JoinTheTeam = ({ setDone }) => {
   const [form, setForm] = useState({
     name: '',
-    summary: '',
     email: '',
     phone: '',
     link: '',
-    about: ''
+    about: '',
+    surname: '',
   })
   const [canSend, setCanSend] = useState()
 
@@ -27,14 +27,14 @@ const JoinTheTeam = ({ setDone }) => {
   const {t} = useTranslation()
 
   useEffect(() => {
-    const { name, summary, email, phone, link, about } = form
+    const { name, surname, email, phone, link, about } = form
     if (
       name.trim().length &&
       email.trim().length &&
-      summary.trim().length &&
+      surname.trim().length &&
       phone.length &&
       link.trim().length &&
-      about.trim().length
+      about.trim().length > 10
     ) {
       setCanSend(true)
     } else {
@@ -48,8 +48,9 @@ const JoinTheTeam = ({ setDone }) => {
 
   const sendForm = async () => {
     const response = await request('http://lbefree.com/api/casting/team', 'POST', form)
-    if (response.ok) {
+    if (response.status) {
       setDone(true)
+      setTimeout(() => setDone(false), 3000)
     }
   }
 
@@ -66,12 +67,12 @@ const JoinTheTeam = ({ setDone }) => {
       <div className="befree-flex">
         <div className="befree-col casting__c-1">
           <Input name="name" placeholder={t('name')} changeHandler={changeHandler} />
+          <Input name="surname" placeholder={t('surname')} changeHandler={changeHandler} />
           <Input name="email" placeholder={t('email')} changeHandler={changeHandler} />
           <PhoneInput phoneValue={form.phone} changeHandler={phoneChange} />
-          <Input name="link" placeholder="LINK TO PORTFOLIO" changeHandler={changeHandler} />
         </div>
         <div className="befree-col casting__c-2">
-          <LongInput name="summary" placeholder={t('link.summary')} changeHandler={changeHandler} />
+          <LongInput name="link" placeholder={t('link.summary')} changeHandler={changeHandler} />
           <Textarea name="about" placeholder={t('transmittalLater')} changeHandler={changeHandler} />
         </div>
       </div>

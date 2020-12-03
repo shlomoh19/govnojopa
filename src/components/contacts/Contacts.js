@@ -33,7 +33,7 @@ const Contacts = ({ done, setDone }) => {
       name.trim().length &&
       email.trim().length &&
       phone.length &&
-      about.trim().length
+      about.trim().length > 10
     ) {
       setCanSend(true)
     } else {
@@ -49,11 +49,11 @@ const Contacts = ({ done, setDone }) => {
 
   const sendForm = async () => {
     const response = await request('http://lbefree.com/api/casting/feedback', 'POST', form)
-    if (response.ok) {
+    if (response.status) {
       setDone(true)
+      setTimeout(() => setDone(false), 3000)
     }
   }
-
 
   return (
     <>

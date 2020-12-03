@@ -10,7 +10,7 @@ export const useHttp = () => {
         let headers = {}
 
         if (body) {
-            headers = { 'Content-Type': 'application/json' }
+            // headers = { 'Content-Type': 'application/json' }
         }
 
         setLoading(true)

@@ -31,7 +31,7 @@ const CastingForm = ({ setDone }) => {
 
     const { request, loading } = useHttp()
 
-    
+
     const modalRef = useRef()
 
     const onToggleTermsModal = () => {
@@ -50,8 +50,9 @@ const CastingForm = ({ setDone }) => {
 
     const sendForm = async () => {
         const response = await request('http://lbefree.com/api/casting/new', 'POST', form)
-        if (response.ok) {
+        if (response.status) {
             setDone(true)
+            setTimeout(() => setDone(false), 3000)
         }
     }
 
@@ -64,7 +65,7 @@ const CastingForm = ({ setDone }) => {
             email.trim().length &&
             phone.length &&
             link.trim().length &&
-            about.trim().length &&
+            about.trim().length > 10 &&
             surname.trim().length &&
             isAgree
         ) {
