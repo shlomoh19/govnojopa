@@ -1,11 +1,11 @@
 import React from 'react'
 import './Textarea.scss'
 
-const Textarea = ({ changeHandler, name, placeholder }) =>
+const Textarea = ({ changeHandler, name, placeholder, error }) =>
   <textarea
     onChange={changeHandler}
     name={name}
-    className="textarea"
+    className={error ? "textarea input-error" : "textarea"}
     placeholder={placeholder}
   />
 

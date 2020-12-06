@@ -1,7 +1,7 @@
 {
   "name": "befree",
   "version": "0.1.0",
-  "homepage": "http://goal.lbefree.com",
+  "homepage": "https://goal.lbefree.com",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",

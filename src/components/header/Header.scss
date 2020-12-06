@@ -1,7 +1,10 @@
 @import "../../UI/style.scss";
 
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -32,6 +35,7 @@
 }
 .header__main-item {
   padding: 0 26px;
+  font-weight: 400;
 }
 .locale__label {
   cursor: pointer;
@@ -43,10 +47,11 @@
 //MENU
 
 .header__menu-icon {
-  position: relative;
+  position: fixed;
   display: none;
   width: 25px;
   height: 20px;
+  right: 30px;
   justify-content: center;
   cursor: pointer;
   .menu-line {

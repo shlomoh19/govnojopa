@@ -7,6 +7,12 @@
   fill: $blue;
 }
 
+.circle-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .circle-flex {
   display: flex;
   justify-content: space-between;

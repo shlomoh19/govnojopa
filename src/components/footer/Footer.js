@@ -11,7 +11,7 @@ const Footer = () => {
                 <div className="footer-item">
                     <NavLink to="/befree/follow" className="footer-link">{t('befree')}</NavLink>
                     <NavLink to="/" className="footer-link">{t('team')}</NavLink>
-                    <NavLink to="/contacts" className="footer-link">{t('befree')}</NavLink>
+                    <NavLink to="/contacts" className="footer-link">{t('contacts')}</NavLink>
                 </div>
                 <div className="footer-item">
                     <NavLink to="/befree/casting" className="footer-link">{t('casting')}</NavLink>

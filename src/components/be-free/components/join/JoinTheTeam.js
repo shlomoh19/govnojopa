@@ -7,7 +7,7 @@ import PhoneInput from '../../../../UI/components/phone/PhoneInput'
 import './JoinTheTeam.scss'
 import { useHttp } from '../../../../hooks/hook.http'
 import Spinner from '../../../spinner/Spinner'
-import {useTranslation} from "react-i18next"
+import { useTranslation } from "react-i18next"
 import '../casting/Casting.scss'
 
 
@@ -18,13 +18,21 @@ const JoinTheTeam = ({ setDone }) => {
     phone: '',
     link: '',
     about: '',
-    surname: '',
+    surname: ''
   })
   const [canSend, setCanSend] = useState()
+  const [errors, setErrors] = useState({
+    name: [''],
+    email: [''],
+    phone: [''],
+    link: [''],
+    about: [''],
+    surname: ['']
+  })
 
   const { request, loading } = useHttp()
 
-  const {t} = useTranslation()
+  const { t } = useTranslation()
 
   useEffect(() => {
     const { name, surname, email, phone, link, about } = form
@@ -32,7 +40,7 @@ const JoinTheTeam = ({ setDone }) => {
       name.trim().length &&
       email.trim().length &&
       surname.trim().length &&
-      phone.length &&
+      phone.trim().length &&
       link.trim().length &&
       about.trim().length > 10
     ) {
@@ -47,33 +55,56 @@ const JoinTheTeam = ({ setDone }) => {
   const phoneChange = value => setForm({ ...form, phone: value })
 
   const sendForm = async () => {
-    const response = await request('http://lbefree.com/api/casting/team', 'POST', form)
-    if (response.status) {
-      setDone(true)
-      setTimeout(() => setDone(false), 3000)
+    try {
+      const response = await request('https://lbefree.com/api/casting/team', 'POST', form)
+      if (response.status) {
+        clearError()
+        setDone(true)
+        setTimeout(() => setDone(false), 3000)
+      }
+    } catch (err) {
+      const resErrors = err.response.data.errors
+      setErrors({ ...errors, ...resErrors })
     }
   }
+
+  const clearError = () =>
+    setErrors({
+      name: [''],
+      email: [''],
+      phone: [''],
+      link: [''],
+      about: [''],
+      surname: ['']
+    })
 
   return (
     <form onSubmit={sendForm} className="befree-container">
       <h2 className="befree-title"> {t('joinTheTeam.title')} <span className="befree-title-blue"> {t('joinTheTeam.title.blue')} </span></h2>
       <p className="befree-text">
         {
-          t('joinTheTeam.text.one') + '' + 
+          t('joinTheTeam.text.one') + '' +
           t('joinTheTeam.text.two') + '' +
           t('joinTheTeam.text.three')
         }
       </p>
+      <div className="error_wrapper">
+        {Object.values(errors).map(err => {
+          if (err.length > 0) {
+            return <p className="input_error error_visible">{err}</p>
+          }
+        })}
+      </div>
       <div className="befree-flex">
         <div className="befree-col casting__c-1">
-          <Input name="name" placeholder={t('name')} changeHandler={changeHandler} />
-          <Input name="surname" placeholder={t('surname')} changeHandler={changeHandler} />
-          <Input name="email" placeholder={t('email')} changeHandler={changeHandler} />
+          <Input error={!!errors.name[0].length && !!errors.name[0] ? errors.name[0] : null} name="name" placeholder={t('name')} changeHandler={changeHandler} />
+          <Input error={!!errors.surname[0].length && !!errors.surname[0] ? errors.surname[0] : null} name="surname" placeholder={t('surname')} changeHandler={changeHandler} />
+          <Input error={!!errors.email[0].length && !!errors.email[0] ? errors.email[0] : null} name="email" placeholder={t('email')} changeHandler={changeHandler} />
           <PhoneInput phoneValue={form.phone} changeHandler={phoneChange} />
         </div>
         <div className="befree-col casting__c-2">
-          <LongInput name="link" placeholder={t('link.summary')} changeHandler={changeHandler} />
-          <Textarea name="about" placeholder={t('transmittalLater')} changeHandler={changeHandler} />
+          <LongInput error={!!errors.link[0].length && !!errors.link[0] ? errors.link[0] : null} name="link" placeholder={t('link.summary')} changeHandler={changeHandler} />
+          <Textarea error={!!errors.about[0].length && !!errors.about[0] ? errors.about[0] : null} name="about" placeholder={t('transmittalLater')} changeHandler={changeHandler} />
         </div>
       </div>
       {loading ? <Spinner /> : <Button disabled={!canSend} onClick={sendForm} title={t('send')} />}

@@ -18,3 +18,15 @@ export const setCookiesLocale = language => {
   'expires=' +
   date 
 }
+
+export const setAgreeWithCookies = () => {
+  let date = new Date(Date.now() + 31*86400e3)
+  date = date.toUTCString()
+  document.cookie = 
+  encodeURIComponent('agreeWithCookies') +
+  '=' +
+  encodeURIComponent('true') +
+  '; ' +
+  'expires=' +
+  date 
+}

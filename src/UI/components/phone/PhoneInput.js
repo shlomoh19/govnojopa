@@ -4,7 +4,7 @@ import './PhoneInput.scss'
 
 const PhoneField = ({ changeHandler }) => {
     const [phoneState, setPhoneState] = useState({
-        flagImg: 'https://flagpedia.net/data/flags/h80/us.webp',
+        flagImg: require('./icons/us.png'),
         codeValue: 1,
         value: ''
     });
@@ -26,11 +26,12 @@ const PhoneField = ({ changeHandler }) => {
     const countryFlagHandler = e => {
         setPhoneState({
             ...phoneState,
-            flagImg: `https://flagpedia.net/data/flags/h80/${countrySelect.current.selectedOptions[0].dataset.countrycode.toLowerCase()}.webp`,
+            flagImg: require(`./icons/${countrySelect.current.selectedOptions[0].dataset.countrycode.toLowerCase()}.png`) ,
             codeValue: e.target.value
         });
-    }
+console.log(countrySelect.current.selectedOptions[0].dataset.countrycode.toLowerCase())
 
+    }
     return (
         <div className="page">
             <div className="container-tel">

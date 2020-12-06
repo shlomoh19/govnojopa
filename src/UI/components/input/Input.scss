@@ -13,6 +13,10 @@
   height: 70px;
 }
 
+.input-error {
+  color: $warning;
+}
+
 @media (max-width: 1440px) {
   .input {
     height: 40px;

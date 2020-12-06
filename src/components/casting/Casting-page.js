@@ -36,7 +36,7 @@ const CastingPage = ({ done, setDone }) => {
         const completePercent = 100 - (daysToEnd * 100 / durationAllDays);
         setPercent(completePercent)
 
-        request('http://lbefree.com/api/casting/counts/all').then(res => setAlreadyRegistered(res))
+        request('https://lbefree.com/api/casting/counts/all').then(res => setAlreadyRegistered(res))
     }, []);
 
 

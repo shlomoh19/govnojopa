@@ -25,7 +25,7 @@ import DanilArtVideo from '../../../files/team/Danil_art.mp4'
 
 const People = [
   { id: 6, position: 'PARTNERSHIP MANAGER', FIO: 'SALMAN AHACHAD', photo: SalmanImg, video: SalmanVideo },
-  { id: 4, position: 'PROGRAMMER', FIO: 'EVGENY SLUGIN', photo: EvgenyImg, video: false },
+  { id: 4, position: 'PROGRAMMER', FIO: 'EUGENE SLUGIN', photo: EvgenyImg, video: false },
   { id: 1, position: 'PROGRAMMER', FIO: 'IVAN KHANIN', photo: IvanImg, video: IvanVideo },
   { id: 10, position: 'PROGRAMMER', FIO: 'DANIEL RASSOMAKHIN', photo: DanielProgImage, video: DanielProgVideo },
   { id: 10, position: 'PR MANAGER', FIO: 'KRISTINA SOSIPATROVA', photo: KristinaImg, video: KristinaVideo },

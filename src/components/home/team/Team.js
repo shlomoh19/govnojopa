@@ -20,6 +20,7 @@ export default function () {
             <div className="team__founder">
                 <div className="team__photo" >
                     <video
+                        loop
                         className="video-team"
                         poster={FounderImg}
                         onMouseOver={playHandler}
@@ -55,6 +56,7 @@ export default function () {
                                 {
                                     video
                                         ? <video
+                                            loop
                                             className="team__photo"
                                             poster={photo}
                                             onMouseOver={playHandler}

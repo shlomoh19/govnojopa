@@ -22,8 +22,13 @@ const Contacts = ({ done, setDone }) => {
     phone: '',
     about: ''
   })
-
   const [canSend, setCanSend] = useState()
+  const [errors, setErrors] = useState({
+    name: [''],
+    email: [''],
+    phone: [''],
+    about: ['']
+  })
 
   const { request, loading } = useHttp()
 
@@ -48,12 +53,26 @@ const Contacts = ({ done, setDone }) => {
   const changeHandler = e => setForm({ ...form, [e.target.name]: e.target.value })
 
   const sendForm = async () => {
-    const response = await request('http://lbefree.com/api/casting/feedback', 'POST', form)
-    if (response.status) {
-      setDone(true)
-      setTimeout(() => setDone(false), 3000)
+    try {
+      const response = await request('https://lbefree.com/api/casting/feedback', 'POST', form)
+      if (response.status) {
+        clearError()
+        setDone(true)
+        setTimeout(() => setDone(false), 3000)
+      }
+    } catch (err) {
+      const resErrors = err.response.data.errors
+      setErrors({ ...errors, ...resErrors })
     }
   }
+
+  const clearError = () =>
+    setErrors({
+      name: [''],
+      email: [''],
+      phone: [''],
+      about: ['']
+    })
 
   return (
     <>
@@ -62,33 +81,40 @@ const Contacts = ({ done, setDone }) => {
         : (
           <div className="contacts-container">
             <h2 className="contacts-title"> {t('contacts')} </h2>
-            <p>SHAPALERNAYA, 2, ST. PETERSBURG, RUSSIA</p>
-            <p>8-(800)-555-35-55</p>
-            <p>OURMAIL@GMAIL.COM</p>
+            <p>GOAL@LBEFREE.COM</p>
             <div className="contacts__icon-wrapper">
-              <FacebookIcon href="https://www.facebook.com/casadelilit" />
-              <InstagramIcon href="https://www.instagram.com/casadelili/" />
+              <FacebookIcon href="https://www.facebook.com/lbefree/" />
+              <InstagramIcon href="https://www.instagram.com/goalbefree/" />
               <TwitterIcon href="https://twitter.com/goalbefree" />
-              <YoutubeIcon href="https://www.youtube.com/channel/UCAZFH1xkBWGn5EbbGuqYcGA" />
+              <YoutubeIcon href="https://www.youtube.com/channel/UCzqeMkwLXZH__kqgEXdmqjg" />
               <TikTokIcon href="www.tiktok.com/@goalbefree" />
             </div>
 
-            <h1 className="contacts-title"><span className="befree-title-blue">
-              {t('contacts.title.blue')}</span> {t('contacts.title')}
+            <h1 className="contacts-title">
+              <span className="befree-title-blue">
+                {t('contacts.title.blue')}
+              </span>
+              {t('contacts.title')}
             </h1>
+
             <p className="contacts-text-grey" style={{ marginBottom: '50px', color: 'black' }}>
               {t('contacts.text')}
+                {Object.values(errors).map(err => {
+                  if (err.length > 0) {
+                    return <p style={{color: '#C52E3B'}} className="input_error error_visible">{err}</p>
+                  }
+                })}
             </p>
 
             <form onSubmit={sendForm} className="contacts-form-container">
               <div className="contacts-flex">
                 <div className="contacts-col contacts__c-1">
-                  <Input name="name" placeholder={t('name')} changeHandler={changeHandler} />
-                  <Input name="email" placeholder={t('email')} changeHandler={changeHandler} />
+                  <Input error={!!errors.name[0].length && !!errors.name[0] ? errors.name[0] : null} name="name" placeholder={t('name')} changeHandler={changeHandler} />
+                  <Input error={!!errors.email[0].length && !!errors.email[0] ? errors.email[0] : null} name="email" placeholder={t('email')} changeHandler={changeHandler} />
                   <PhoneInput changeHandler={phoneChange} phoneValue={form.phone} />
                 </div>
                 <div className="contacts-col contacts__c-2">
-                  <Textarea name="about" placeholder={t('transmittalLater')} changeHandler={changeHandler} />
+                  <Textarea error={!!errors.about[0].length && !!errors.about[0] ? errors.about[0] : null} name="about" placeholder={t('transmittalLater')} changeHandler={changeHandler} />
                 </div>
               </div>
               {loading ? <Spinner /> : <Button disabled={!canSend} onClick={sendForm} title={t('send')} />}

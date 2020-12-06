@@ -10,28 +10,26 @@
   width: 100%;
   max-width: 700px;
   height: 70px;
-}
 
-@media (max-width: 1440px) {
-  .long-input {
+  @media (max-width: 1440px) {
     height: 40px;
     font-size: 14px;
   }
-}
 
-@media (max-width: 1000px) {
-  .long-input {
+  @media (max-width: 1200px) {
+    height: 35px;
+  }
+
+  @media (max-width: 1000px) {
     height: 30px;
   }
-}
-@media (max-width: 800px) {
-  .long-input {
+
+  @media (max-width: 800px) {
     width: 80%;
     height: 50px;
   }
-}
-@media (max-width: 500px) {
-  .long-input {
+
+  @media (max-width: 500px) {
     width: 100%;
   }
 }
