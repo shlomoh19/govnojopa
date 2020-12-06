@@ -29,7 +29,7 @@ const MobileMenu = ({ mobileMenu, mobileMenuHandler }) => {
                 {t('contacts')}
             </NavLink>
             <div style={{ position: 'relative' }} >
-                <div style={{marginBottom: '20px'}} onClick={() => setLocaleMenuIsOpen(!localeMenuIsOpen)}>
+                <div style={{marginBottom: '20px', cursor: 'pointer'}} onClick={() => setLocaleMenuIsOpen(!localeMenuIsOpen)}>
                     Language
                     <i style={localeMenuIsOpen ? { transform: 'rotate(180deg)' } : null} className="fas fa-angle-down icon-arr" />
                 </div>
