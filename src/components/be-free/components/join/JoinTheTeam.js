@@ -9,6 +9,7 @@ import { useHttp } from '../../../../hooks/hook.http'
 import Spinner from '../../../spinner/Spinner'
 import { useTranslation } from "react-i18next"
 import '../casting/Casting.scss'
+import { validateEmail } from '../../../../utils/validate-utils'
 
 
 
@@ -57,12 +58,20 @@ const JoinTheTeam = ({ setDone }) => {
 
   const sendForm = async () => {
     try {
-      const response = await request('https://lbefree.com/api/casting/team', 'POST', form)
-      if (response.status) {
-        clearError()
-        setDone(true)
-        setTimeout(() => setDone(false), 3000)
+      if (validateEmail(form.email)) {
+        const response = await request('https://lbefree.com/api/casting/team', 'POST', form)
+        if (response.status) {
+          clearError()
+          setDone(true)
+          setTimeout(() => setDone(false), 3000)
+        }
+      } else {
+        setErrors({
+          ...errors,
+          email: ['Email is not valid!']
+        })
       }
+      
     } catch (err) {
       const resErrors = err.response.data.errors
       setErrors({ ...errors, ...resErrors })
