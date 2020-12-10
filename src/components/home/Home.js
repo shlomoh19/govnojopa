@@ -4,9 +4,14 @@ import './Home.scss'
 import { useTranslation } from "react-i18next";
 import SimpleVideo from './video/Simple-video';
 import TeamImage from '../../files/TeamPicture.jpg';
+import { smoothJumpUp } from '../../utils/scroll-utils';
 
 const Home = () => {
     const { t } = useTranslation()
+
+    useEffect(() => {
+        smoothJumpUp()
+    }, [])
 
     return (
         <div className="home_page">

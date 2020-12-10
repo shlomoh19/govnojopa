@@ -3,14 +3,18 @@
 .input {
   outline: none;
   border: 1px solid $darkGrey;
-  text-align: center;
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border-radius: 111px;
-  width: 100%;
+  padding: 0 10%;
+  width: 78%;
   max-width: 500px;
   min-width: 250px;
-  height: 70px;
+  height: 80px;
+
+  &:focus {
+    border: 1px solid $blue;
+  }
 }
 
 .input-error {
@@ -19,30 +23,34 @@
 
 @media (max-width: 1440px) {
   .input {
-    height: 40px;
-    font-size: 14px;
+    height: 60px;
+    font-size: 16px;
+    min-width: 100px;
   }
 }
 
 @media (max-width: 1200px) {
   .input {
-    height: 35px;
-  }
-}
-@media (max-width: 1000px) {
-  .input {
-    height: 30px;
-    font-size: 14px;
-  }
-}
-@media (max-width: 800px) {
-  .input {
-    width: 80%;
     height: 50px;
   }
 }
+
+@media (max-width: 1000px) {
+  .input {
+    height: 45px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 800px) {
+  .input {
+    width: 60%;
+    height: 50px;
+  }
+}
+
 @media (max-width: 500px) {
   .input {
-    width: 100%;
+    width: 80%;
   }
 }

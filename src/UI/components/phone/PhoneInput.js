@@ -1,8 +1,7 @@
 import React, { useRef, useState } from 'react'
-import { useTranslation } from 'react-i18next';
 import './PhoneInput.scss'
 
-const PhoneField = ({ changeHandler }) => {
+const PhoneField = ({ changeHandler, placeholder }) => {
     const [phoneState, setPhoneState] = useState({
         flagImg: require('./icons/us.png'),
         codeValue: 1,
@@ -11,14 +10,12 @@ const PhoneField = ({ changeHandler }) => {
 
     const validPhone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 
-    const { t } = useTranslation()
-
     const countrySelect = useRef();
 
     const phoneHandler = e => {
         const isValid = validPhone.some(num => num == e.target.value.slice(-1))
         if (!isValid) return
-        setPhoneState({...phoneState, value: e.target.value})
+        setPhoneState({ ...phoneState, value: e.target.value })
         changeHandler('+' + phoneState.codeValue + e.target.value)
     }
 
@@ -26,11 +23,9 @@ const PhoneField = ({ changeHandler }) => {
     const countryFlagHandler = e => {
         setPhoneState({
             ...phoneState,
-            flagImg: require(`./icons/${countrySelect.current.selectedOptions[0].dataset.countrycode.toLowerCase()}.png`) ,
+            flagImg: require(`./icons/${countrySelect.current.selectedOptions[0].dataset.countrycode.toLowerCase()}.png`),
             codeValue: e.target.value
         });
-console.log(countrySelect.current.selectedOptions[0].dataset.countrycode.toLowerCase())
-
     }
     return (
         <div className="page">
@@ -779,11 +774,12 @@ console.log(countrySelect.current.selectedOptions[0].dataset.countrycode.toLower
                     </div>
                     <div className="default_value"> {'+' + phoneState.codeValue}</div>
                     <input
+                        id={`input_${placeholder}`}
                         type="tel"
-                        placeholder={t('phone')}
                         className="tel"
                         onChange={phoneHandler}
                         value={phoneState.value}
+                        placeholder={placeholder}
                     />
                 </div>
             </div>

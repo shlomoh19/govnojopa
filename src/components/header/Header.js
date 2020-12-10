@@ -51,7 +51,7 @@ const Header = ({ mobileMenuHandler, mobileMenu, children }) => {
                     <span className={mobileMenu ? 'menu-line menu-three menu-line-open-three' : 'menu-line menu-three'} />
                 </div>
             </header>
-            <main style={{marginTop: '100px'}}>
+            <main className="main_wrapper">
                 {children}
             </main>
         </>

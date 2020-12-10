@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink, Route } from 'react-router-dom'
 import Follow from './components/follow/Follow'
 import Casting from './components/casting/Casting'
@@ -8,11 +8,16 @@ import DonePage from '../done/Done';
 import { useTranslation } from "react-i18next";
 import SimpleVideo from '../home/video/Simple-video';
 import CastingPoster from '../../files/castingImage.jpg'
+import { smoothJumpUp } from '../../utils/scroll-utils'
 
 import './Be-free.scss'
 
 function BeFree({ done, setDone }) {
   const [borderActiveMarginLeft, setBorderActiveMarginLeft] = useState(0)
+
+  useEffect(() => {
+    smoothJumpUp()
+  }, [])
 
   const { t } = useTranslation()
 
@@ -33,7 +38,7 @@ function BeFree({ done, setDone }) {
   return (
     <div className="befree">
       <SimpleVideo image={CastingPoster} videoURL="http://lbefree.com/storage/casting/casting.mp4" title="casting" />
-      <header className="befree__header" style={{marginTop: '50px'}}>
+      <header className="befree__header" style={{ marginTop: '50px' }}>
         <NavLink
           onClick={setBorderFollow} className="befree__header-item" to="/befree/follow">
           {t('follow')}

@@ -13,6 +13,8 @@ import YoutubeIcon from '../../UI/icons/YoutubeIcon'
 import FacebookIcon from '../../UI/icons/FacebookIcon'
 import TwitterIcon from '../../UI/icons/TwitterIcon'
 import TikTokIcon from '../../UI/icons/TikTokIcon'
+import { smoothJumpUp } from '../../utils/scroll-utils'
+import { validateEmail } from '../../utils/validate-utils'
 
 
 const Contacts = ({ done, setDone }) => {
@@ -29,6 +31,10 @@ const Contacts = ({ done, setDone }) => {
     phone: [''],
     about: ['']
   })
+
+  useEffect(() => {
+    smoothJumpUp()
+  }, [])
 
   const { request, loading } = useHttp()
 
@@ -54,11 +60,18 @@ const Contacts = ({ done, setDone }) => {
 
   const sendForm = async () => {
     try {
-      const response = await request('https://lbefree.com/api/casting/feedback', 'POST', form)
-      if (response.status) {
-        clearError()
-        setDone(true)
-        setTimeout(() => setDone(false), 3000)
+      if (validateEmail(form.email)) {
+        const response = await request('https://lbefree.com/api/casting/feedback', 'POST', form)
+        if (response.status) {
+          clearError()
+          setDone(true)
+          setTimeout(() => setDone(false), 3000)
+        }
+      } else {
+        setErrors({
+          ...errors,
+          email: ['Email is not valid!']
+        })
       }
     } catch (err) {
       const resErrors = err.response.data.errors
@@ -99,22 +112,22 @@ const Contacts = ({ done, setDone }) => {
 
             <p className="contacts-text-grey" style={{ marginBottom: '50px', color: 'black' }}>
               {t('contacts.text')}
-                {Object.values(errors).map(err => {
-                  if (err.length > 0) {
-                    return <p style={{color: '#C52E3B'}} className="input_error error_visible">{err}</p>
-                  }
-                })}
+              {Object.values(errors).map(err => {
+                if (err.length > 0) {
+                  return <p style={{ color: '#C52E3B' }} className="input_error error_visible">{err}</p>
+                }
+              })}
             </p>
 
             <form onSubmit={sendForm} className="contacts-form-container">
               <div className="contacts-flex">
                 <div className="contacts-col contacts__c-1">
-                  <Input error={!!errors.name[0].length && !!errors.name[0] ? errors.name[0] : null} name="name" placeholder={t('name')} changeHandler={changeHandler} />
-                  <Input error={!!errors.email[0].length && !!errors.email[0] ? errors.email[0] : null} name="email" placeholder={t('email')} changeHandler={changeHandler} />
-                  <PhoneInput changeHandler={phoneChange} phoneValue={form.phone} />
+                  <Input value={form.name} error={!!errors.name[0].length && !!errors.name[0] ? errors.name[0] : null} name="name" placeholder={t('name')} changeHandler={changeHandler} />
+                  <Input value={form.email} error={!!errors.email[0].length && !!errors.email[0] ? errors.email[0] : null} name="email" placeholder={t('email')} changeHandler={changeHandler} />
+                  <PhoneInput placeholder={t('phone')} changeHandler={phoneChange} phoneValue={form.phone} />
                 </div>
                 <div className="contacts-col contacts__c-2">
-                  <Textarea error={!!errors.about[0].length && !!errors.about[0] ? errors.about[0] : null} name="about" placeholder={t('transmittalLater')} changeHandler={changeHandler} />
+                  <Textarea value={form.about} error={!!errors.about[0].length && !!errors.about[0] ? errors.about[0] : null} name="about" placeholder={t('transmittalLater')} changeHandler={changeHandler} />
                 </div>
               </div>
               {loading ? <Spinner /> : <Button disabled={!canSend} onClick={sendForm} title={t('send')} />}

@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { smoothJumpUp } from '../../utils/scroll-utils'
 import './Done.scss'
 
 const DonePage = () => {
+  useEffect(() => {
+    smoothJumpUp()
+  }, [])
+  
   return (
     <div className="done">
       <div className="done_title">SUCCESS</div>

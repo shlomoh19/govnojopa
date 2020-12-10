@@ -11,6 +11,7 @@ import CastingPoster from '../../files/castingImage.jpg';
 
 import './Casting-page.scss'
 import 'react-circular-progressbar/dist/styles.css';
+import { smoothJumpUp } from '../../utils/scroll-utils';
 
 const CastingPage = ({ done, setDone }) => {
     const [percent, setPercent] = useState(0)
@@ -24,6 +25,7 @@ const CastingPage = ({ done, setDone }) => {
     const { request } = useHttp()
 
     useEffect(() => {
+        smoothJumpUp()
         const castingStartDay = moment('2020-10-1');
         const now = moment(new Date());
         const end = moment("2021-02-28");

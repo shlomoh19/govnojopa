@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next"
 import '../casting/Casting.scss'
 
 
+
 const JoinTheTeam = ({ setDone }) => {
   const [form, setForm] = useState({
     name: '',
@@ -97,14 +98,14 @@ const JoinTheTeam = ({ setDone }) => {
       </div>
       <div className="befree-flex">
         <div className="befree-col casting__c-1">
-          <Input error={!!errors.name[0].length && !!errors.name[0] ? errors.name[0] : null} name="name" placeholder={t('name')} changeHandler={changeHandler} />
-          <Input error={!!errors.surname[0].length && !!errors.surname[0] ? errors.surname[0] : null} name="surname" placeholder={t('surname')} changeHandler={changeHandler} />
-          <Input error={!!errors.email[0].length && !!errors.email[0] ? errors.email[0] : null} name="email" placeholder={t('email')} changeHandler={changeHandler} />
-          <PhoneInput phoneValue={form.phone} changeHandler={phoneChange} />
+          <Input value={form.name} error={!!errors.name[0].length && !!errors.name[0] ? errors.name[0] : null} name="name" placeholder={t('name')} changeHandler={changeHandler} />
+          <Input value={form.surname} error={!!errors.surname[0].length && !!errors.surname[0] ? errors.surname[0] : null} name="surname" placeholder={t('surname')} changeHandler={changeHandler} />
+          <Input value={form.email} error={!!errors.email[0].length && !!errors.email[0] ? errors.email[0] : null} name="email" placeholder={t('email')} changeHandler={changeHandler} />
+          <PhoneInput placeholder={t('phone')} phoneValue={form.phone} changeHandler={phoneChange} />
         </div>
         <div className="befree-col casting__c-2">
-          <LongInput error={!!errors.link[0].length && !!errors.link[0] ? errors.link[0] : null} name="link" placeholder={t('link.summary')} changeHandler={changeHandler} />
-          <Textarea error={!!errors.about[0].length && !!errors.about[0] ? errors.about[0] : null} name="about" placeholder={t('transmittalLater')} changeHandler={changeHandler} />
+          <LongInput value={form.link} error={!!errors.link[0].length && !!errors.link[0] ? errors.link[0] : null} name="link" placeholder={t('link.summary')} changeHandler={changeHandler} />
+          <Textarea value={form.about} error={!!errors.about[0].length && !!errors.about[0] ? errors.about[0] : null} name="about" placeholder={t('transmittalLater')} changeHandler={changeHandler} />
         </div>
       </div>
       {loading ? <Spinner /> : <Button disabled={!canSend} onClick={sendForm} title={t('send')} />}

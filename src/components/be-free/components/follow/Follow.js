@@ -5,6 +5,7 @@ import { useHttp } from '../../../../hooks/hook.http.js';
 import Spinner from '../../../spinner/Spinner';
 import { useTranslation } from "react-i18next";
 import './Follow.scss'
+import { validateEmail } from '../../../../utils/validate-utils';
 
 
 function Follow({ setDone }) {
@@ -32,12 +33,20 @@ function Follow({ setDone }) {
 
   const sendForm = async () => {
     try {
-      const response = await request('https://lbefree.com/api/casting/subscribe', 'POST', form)
-      if (response.status) {
-        clearErrors()
-        setDone(true)
-        setTimeout(() => setDone(false), 3000)
+      if (validateEmail(form.email)) {
+        const response = await request('https://lbefree.com/api/casting/subscribe', 'POST', form)
+        if (response.status) {
+          clearErrors()
+          setDone(true)
+          setTimeout(() => setDone(false), 3000)
+        }
+      } else {
+        setErrors({
+          ...errors,
+          email: ['Email is not valid!']
+        })
       }
+      
     } catch (err) {
       const resErrors = err.response?.data.errors
       setErrors({ ...errors, ...resErrors })
@@ -70,14 +79,18 @@ function Follow({ setDone }) {
         changeHandler={formChange}
         name="name"
         placeholder={t('name')}
+        value={form.name}
       />
       <Input
         error={!!errors.email[0].length && !!errors.email[0] ? errors.email[0] : null}
         changeHandler={formChange}
         name="email"
         placeholder={t('email')}
+        value={form.email}
       />
-      {loading ? <Spinner /> : <Button onClick={sendForm} disabled={!canSend} title={t('send')} />}
+      <div style={{width: '100%', marginTop: '-25px'}}>
+        {loading ? <Spinner /> : <Button onClick={sendForm} disabled={!canSend} title={t('send')} />}
+      </div>
     </form>
   )
 }

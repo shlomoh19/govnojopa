@@ -63,7 +63,7 @@ const CastingInfo = () => {
                     <p> {t('casting.moreInfo.soccer.two')} </p>
                     <p> {t('casting.moreInfo.soccer.three')} </p>
                     <p> {t('casting.moreInfo.soccer.four')} </p>
-                    <p> {t('casting.moreInfo.soccer.five')} </p>
+                    {/* <p> {t('casting.moreInfo.soccer.five')} </p> */}
                 </div>
             </div>
             <p className={"casting_more-info"} onClick={toggleMoreInfo}>

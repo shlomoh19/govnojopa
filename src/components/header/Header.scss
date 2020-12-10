@@ -11,10 +11,17 @@
   height: 60px;
   background: $lightGrey;
   z-index: 10;
+  backdrop-filter: blur(4px);
+
+  @media (max-width: 500px) {
+    backdrop-filter: none;
+  }
+
   .header__main {
     display: flex;
     justify-content: space-around;
   }
+
   .header__item {
     font-size: 20px;
     display: flex;
@@ -24,19 +31,26 @@
     text-decoration: none;
     color: $black;
     transition: background, transform .2s;
+
     &:hover {
       color: $blue;
     }
   }
 }
 
+.main_wrapper {
+  margin-top: 100px;
+}
+
 .header__item-active {
   color: $blue !important;
 }
+
 .header__main-item {
   padding: 0 26px;
   font-weight: 400;
 }
+
 .locale__label {
   cursor: pointer;
   color: #636e9e;
@@ -54,6 +68,7 @@
   right: 30px;
   justify-content: center;
   cursor: pointer;
+
   .menu-line {
     position: absolute;
     background-color: black;
@@ -61,12 +76,15 @@
     width: 25px;
     transition: all .7s;
   }
+
   .menu-one {
     top: 0;
   }
+
   .menu-two {
     top: 47%;
   }
+
   .menu-three {
     bottom: 0;
   }
@@ -76,10 +94,12 @@
   transform: translateY(8.5px) rotate(45deg);
   animation: line-mount-one ease-in-out .7s;
 }
+
 .menu-line-open-two.menu-two {
   width: 0;
   animation: menu-line-open-two ease-in-out .5s;
 }
+
 .menu-line-open-three.menu-three {
   transform: translateY(-8.5px) rotate(-45deg);
   animation: line-mount-three ease-in-out .7s;
@@ -89,6 +109,7 @@
   0% {
     transform: translateY(0px) rotate(0deg);
   }
+
   100% {
     transform: translateY(8.5px) rotate(400deg);
   }
@@ -98,6 +119,7 @@
   0% {
     transform: translateY(0px) rotate(0deg);
   }
+
   100% {
     transform: translateY(-8.5px) rotate(-400deg);
   }
@@ -108,6 +130,7 @@
     width: 25px;
     opacity: 1;
   }
+
   100% {
     width: 0;
     transform: translateX(2px);
@@ -118,6 +141,7 @@
 @media (max-width: 1440px) {
   .header {
     font-size: 16px;
+
     .header__item {
       font-size: 16px;
     }
@@ -135,6 +159,7 @@
   .header {
     padding-left: 20px;
     padding-right: 20px;
+
     .header__item {
       font-size: 14px;
     }
@@ -144,6 +169,7 @@
 @media (max-width: 560px) {
   .header {
     font-size: 12px;
+
     .header__item {
       font-size: 12px;
     }
@@ -157,13 +183,16 @@
     justify-content: space-between;
     padding: 0px 30px;
     height: 50px;
+
     .header__item {
       display: none;
     }
+
     .header__main {
       display: none;
     }
   }
+
   .header__menu-icon {
     display: flex;
   }
