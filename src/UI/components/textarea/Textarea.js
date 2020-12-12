@@ -11,6 +11,8 @@ const Textarea = ({ changeHandler, name, placeholder, error, value }) => {
       }
       >{placeholder}</label>
       <textarea
+        autoCapitalize="sentences"
+        spellCheck
         id={`input_${name}`}
         onChange={changeHandler}
         name={name}

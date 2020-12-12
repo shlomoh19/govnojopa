@@ -13,6 +13,7 @@ import '../../../components/be-free/Be-free.scss'
 import '../../../components/be-free/components/join/JoinTheTeam.scss'
 import './casting-textArea.scss'
 import { validateEmail } from '../../../utils/validate-utils';
+import phone from 'phone'
 
 const CastingForm = ({ setDone }) => {
     const [form, setForm] = useState({
@@ -79,17 +80,24 @@ const CastingForm = ({ setDone }) => {
 
     const sendForm = async () => {
         try {
-            if (validateEmail(form.email)) {
-                const response = await request('https://lbefree.com/api/casting/new', 'POST', form)
-                if (response.status) {
-                    clearError()
-                    setDone(true)
-                    setTimeout(() => setDone(false), 3000)
+            if (phone(form.phone, '').length > 0) {
+                if (validateEmail(form.email)) {
+                    const response = await request('https://lbefree.com/api/casting/new', 'POST', form)
+                    if (response.status) {
+                        clearError()
+                        setDone(true)
+                        setTimeout(() => setDone(false), 3000)
+                    }
+                } else {
+                    setErrors({
+                        ...errors,
+                        email: ['Email is not valid!']
+                    })
                 }
             } else {
                 setErrors({
                     ...errors,
-                    email: ['Email is not valid!']
+                    phone: ['Phone is not valid!']
                 })
             }
         } catch (err) {

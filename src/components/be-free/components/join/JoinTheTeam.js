@@ -10,6 +10,7 @@ import Spinner from '../../../spinner/Spinner'
 import { useTranslation } from "react-i18next"
 import '../casting/Casting.scss'
 import { validateEmail } from '../../../../utils/validate-utils'
+import phone from 'phone'
 
 
 
@@ -58,17 +59,25 @@ const JoinTheTeam = ({ setDone }) => {
 
   const sendForm = async () => {
     try {
-      if (validateEmail(form.email)) {
-        const response = await request('https://lbefree.com/api/casting/team', 'POST', form)
-        if (response.status) {
-          clearError()
-          setDone(true)
-          setTimeout(() => setDone(false), 3000)
+      if (phone(form.phone, '').length > 0) {
+        if (validateEmail(form.email)) {
+
+          const response = await request('https://lbefree.com/api/casting/team', 'POST', form)
+          if (response.status) {
+            clearError()
+            setDone(true)
+            setTimeout(() => setDone(false), 3000)
+          }
+        } else {
+          setErrors({
+            ...errors,
+            email: ['Email is not valid!']
+          })
         }
       } else {
         setErrors({
           ...errors,
-          email: ['Email is not valid!']
+          phone: ['Phone number is not valid!']
         })
       }
       

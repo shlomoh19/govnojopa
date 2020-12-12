@@ -7,7 +7,6 @@ import Spinner from '../spinner/Spinner'
 import DonePage from '../done/Done'
 import { useHttp } from '../../hooks/hook.http'
 import { useTranslation } from "react-i18next"
-import './Contacts.scss'
 import InstagramIcon from '../../UI/icons/InstagramIcon'
 import YoutubeIcon from '../../UI/icons/YoutubeIcon'
 import FacebookIcon from '../../UI/icons/FacebookIcon'
@@ -15,8 +14,10 @@ import TwitterIcon from '../../UI/icons/TwitterIcon'
 import TikTokIcon from '../../UI/icons/TikTokIcon'
 import { smoothJumpUp } from '../../utils/scroll-utils'
 import { validateEmail } from '../../utils/validate-utils'
+import phone from 'phone' 
 
-
+import './Contacts.scss'
+ 
 const Contacts = ({ done, setDone }) => {
   const [form, setForm] = useState({
     name: '',
@@ -60,19 +61,27 @@ const Contacts = ({ done, setDone }) => {
 
   const sendForm = async () => {
     try {
-      if (validateEmail(form.email)) {
-        const response = await request('https://lbefree.com/api/casting/feedback', 'POST', form)
-        if (response.status) {
-          clearError()
-          setDone(true)
-          setTimeout(() => setDone(false), 3000)
+      if (phone(form.phone, '').length > 0) {
+        if (validateEmail(form.email)) {
+          const response = await request('https://lbefree.com/api/casting/feedback', 'POST', form)
+          if (response.status) {
+            clearError()
+            setDone(true)
+            setTimeout(() => setDone(false), 3000)
+          }
+        } else {
+          setErrors({
+            ...errors,
+            email: ['Email is not valid!']
+          })
         }
       } else {
         setErrors({
           ...errors,
-          email: ['Email is not valid!']
+          phone: ['Phone number is not valid!']
         })
       }
+      
     } catch (err) {
       const resErrors = err.response.data.errors
       setErrors({ ...errors, ...resErrors })

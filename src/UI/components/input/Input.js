@@ -2,6 +2,23 @@ import React from 'react'
 import './Input.scss'
 
 const Input = ({ changeHandler, name, placeholder, error, value }) => {
+
+  const maxLengthProperty = propName => {
+    switch (propName) {
+      case 'email': {
+        return 64
+      }
+      case 'name': {
+        return 30
+      }
+      case 'surname': {
+        return 30
+      }
+      default:
+        return 255
+    }
+  }
+
   return (
     <div className="field_wrapper">
       <label htmlFor={`input_${name}`} className={
@@ -17,6 +34,8 @@ const Input = ({ changeHandler, name, placeholder, error, value }) => {
         name={name}
         type="text"
         value={value}
+        autoComplete="off"
+        maxLength={maxLengthProperty(name)}
       />
     </div>
   )

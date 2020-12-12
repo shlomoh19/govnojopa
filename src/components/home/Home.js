@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import SimpleVideo from './video/Simple-video';
 import TeamImage from '../../files/TeamPicture.jpg';
 import { smoothJumpUp } from '../../utils/scroll-utils';
+import VideoJs from './video/VideoJs';
 
 const Home = () => {
     const { t } = useTranslation()
@@ -21,11 +22,16 @@ const Home = () => {
                     {t('team.title.text')}
                 </div>
             </div>
-            <SimpleVideo
+            {/* <SimpleVideo
                 title="team"
                 videoURL="http://lbefree.com/storage/casting/team-video.mp4"
                 image={TeamImage}
+            /> */}
+            <VideoJs
+                videoURL="http://lbefree.com/storage/casting/team-video.mp4"
+                image={TeamImage}
             />
+
             <div className="home__title"> {t('team.subtitle.text')} </div>
             <Team />
         </div>

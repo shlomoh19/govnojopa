@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+
 import './PhoneInput.scss'
 
 const PhoneField = ({ changeHandler, placeholder }) => {
@@ -780,6 +781,7 @@ const PhoneField = ({ changeHandler, placeholder }) => {
                         onChange={phoneHandler}
                         value={phoneState.value}
                         placeholder={placeholder}
+                        maxLength={15}
                     />
                 </div>
             </div>
