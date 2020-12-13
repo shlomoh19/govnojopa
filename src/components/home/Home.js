@@ -28,6 +28,7 @@ const Home = () => {
                 image={TeamImage}
             /> */}
             <VideoJs
+                title="team"
                 videoURL="http://lbefree.com/storage/casting/team-video.mp4"
                 image={TeamImage}
             />

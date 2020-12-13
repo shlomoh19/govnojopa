@@ -1,22 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import videojs from 'video.js';
+
 import './Video.scss'
 
-const VideoJs = ({ videoURL, image }) => {
-    const [play, setPlay] = useState(false)
-
+const VideoJs = ({ videoURL, image, title }) => {
     const playerRef = useRef()
 
-    let player
+    
 
     useEffect(() => {
-        player = videojs(playerRef.current, { controlBar: true, loop: true, textTrackSettings: false }, () => {
+        const player = videojs(playerRef.current, { controlBar: true, loop: true }, () => {
             player.src(videoURL);
-            player.poster(image)
+            player.poster(image);
         });
-
-        window.play = player
-
+        
         return () => {
             player.dispose();
         };
@@ -24,8 +21,13 @@ const VideoJs = ({ videoURL, image }) => {
 
     return (
         <div className="video-wrapper">
-            <div data-vjs-player >
-                <video ref={playerRef} className="video-js vjs-16-9 video" playsInline />
+            <div data-vjs-player>
+                <video
+                    id={`video_${title}`}
+                    ref={playerRef}
+                    className="video-js vjs-16-9 video"
+                    playsInline
+                />
             </div>
         </div>
     );
