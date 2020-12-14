@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import Team from "./team/Team";
 import './Home.scss'
 import { useTranslation } from "react-i18next";
-import SimpleVideo from './video/Simple-video';
 import TeamImage from '../../files/TeamPicture.jpg';
 import { smoothJumpUp } from '../../utils/scroll-utils';
 import VideoJs from './video/VideoJs';

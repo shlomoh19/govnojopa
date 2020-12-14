@@ -9,7 +9,6 @@ import CastingPoster from '../../files/castingImage.jpg';
 import { smoothJumpUp } from '../../utils/scroll-utils';
 
 import './Casting-page.scss'
-import 'react-circular-progressbar/dist/styles.css';
 import VideoJs from '../home/video/VideoJs';
 import CircularProgressbar from '../../UI/components/circular-rogressbar/circular-progressbar';
 

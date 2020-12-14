@@ -541,102 +541,20 @@
       border-bottom-right-radius: 20px;
     }
   }
+}
 
-  .controls-will-active {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, .7);
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
-  }
+.video-wrapper {
+    .video {
+        border-radius: 50px;
+        outline: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
 
-  .controls-will-open {
-    opacity: 1 !important;
-    border-radius: 0% !important;
-  }
-
-  .controls-open {
-    width: 100% !important;
-    left: 0 !important;
-    border-bottom-right-radius: 60px !important;
-    border-bottom-left-radius: 60px !important;
-  }
-
-  .controls {
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    width: 10%;
-    flex-wrap: wrap;
-    transition: all ease-in .2s;
-    background-color: #212121;
-    //border-bottom-right-radius: 60px;
-    //border-bottom-left-radius: 60px;
-    border-radius: 100%;
-
-    .buttons {
-      padding: 10px 20px;
-      opacity: 0;
-      transition: all ease-in .2s;
-
-      .play-pause {
-        background: none;
-        border: 0;
-        outline: 0;
-        cursor: pointer;
-
-        &:before {
-          content: '\f144';
-          font-family: 'Font Awesome 5 Free';
-          width: 30px;
-          height: 30px;
-          display: inline-block;
-          font-size: 30px;
-          color: #fff;
+        @media (max-width: 900px) {
+            border-radius: 20px;
         }
-      }
-
-      .play-pause.play:before {
-        content: '\f144';
-      }
-
-      .play-pause.pause:before {
-        content: '\f28b';
-      }
     }
-
-    .buttons-active {
-      opacity: 1;
-    }
-
-    .orange-bar {
-      position: absolute;
-      height: 5px;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #D5D8E6;
-      border-radius: 100%;
-      cursor: pointer;
-      transition: all ease-in .2s;
-
-      .orange-juice {
-        height: 5px;
-        background: orangered;
-        border-radius: 100%;
-        transition: all ease-in .2s;
-      }
-
-      &:hover {
-        height: 10px;
-        border-radius: 0px;
-
-        .orange-juice {
-          height: 10px;
-          border-radius: 0px;
-        }
-      }
-    }
-  }
 }

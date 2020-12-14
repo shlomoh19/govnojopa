@@ -6,7 +6,6 @@ import Donate from "./components/donate/Donate";
 import JoinTheTeam from './components/join/JoinTheTeam'
 import DonePage from '../done/Done';
 import { useTranslation } from "react-i18next";
-import SimpleVideo from '../home/video/Simple-video';
 import CastingPoster from '../../files/castingImage.jpg'
 import { smoothJumpUp } from '../../utils/scroll-utils'
 
