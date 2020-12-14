@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import moment from "moment";
 import CastingInfo from "../../UI/components/more-info-casting/more-info.casting";
 import CastingForm from "../../UI/components/casting-form/casting-form";
 import DonePage from '../done/Done';
 import { useTranslation } from 'react-i18next';
 import { useHttp } from '../../hooks/hook.http';
-import SimpleVideo from '../home/video/Simple-video';
 import CastingPoster from '../../files/castingImage.jpg';
+import { smoothJumpUp } from '../../utils/scroll-utils';
 
 import './Casting-page.scss'
 import 'react-circular-progressbar/dist/styles.css';
-import { smoothJumpUp } from '../../utils/scroll-utils';
+import VideoJs from '../home/video/VideoJs';
+import CircularProgressbar from '../../UI/components/circular-rogressbar/circular-progressbar';
 
 const CastingPage = ({ done, setDone }) => {
     const [percent, setPercent] = useState(0)
@@ -43,39 +43,25 @@ const CastingPage = ({ done, setDone }) => {
 
 
     return (
-        <div style={{marginTop: '50px'}}>
+        <div style={{ marginTop: '50px' }}>
             {done
                 ? <DonePage />
                 : <>
-                    <SimpleVideo image={CastingPoster} videoURL="http://lbefree.com/storage/casting/casting.mp4" title="casting-page" />
+                    <VideoJs
+                        title="casting-page"
+                        videoURL="https://lbefree.com/storage/casting/casting.mp4"
+                        image={CastingPoster}
+                    />
                     <div style={{ textAlign: 'center' }}>
                         <h2 style={{ fontWeight: '400', fontSize: '30px' }}> {alreadyRegistered} </h2>
                         <span> {t('casting.already.registred')} </span>
                         <div className={"circle-flex"}>
                             <div className={'circle-item'}>
-                                <CircularProgressbar
-                                    value={percent}
-                                    text={daysToEnd}
-                                    className={"circle"}
-                                    strokeWidth={'3'}
-                                    styles={buildStyles({
-                                        textSize: '30px',
-                                        pathColor: '#384786'
-                                    })}
-                                />
+                                <CircularProgressbar title={daysToEnd} percent={percent} />
                                 <span> {t('days')} </span>
                             </div>
                             <div className={'circle-item'}>
-                                <CircularProgressbar
-                                    value={percent}
-                                    text={hoursToEnd}
-                                    className={"circle"}
-                                    strokeWidth={'3'}
-                                    styles={buildStyles({
-                                        textSize: '30px',
-                                        pathColor: '#384786'
-                                    })}
-                                />
+                                <CircularProgressbar title={hoursToEnd} percent={percent} />
                                 <span> {t('hours')} </span>
                             </div>
                         </div>

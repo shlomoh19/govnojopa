@@ -22,11 +22,6 @@ const Home = () => {
                     {t('team.title.text')}
                 </div>
             </div>
-            {/* <SimpleVideo
-                title="team"
-                videoURL="http://lbefree.com/storage/casting/team-video.mp4"
-                image={TeamImage}
-            /> */}
             <VideoJs
                 title="team"
                 videoURL="http://lbefree.com/storage/casting/team-video.mp4"

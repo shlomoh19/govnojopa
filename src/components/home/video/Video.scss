@@ -247,6 +247,107 @@
     border: none;
     outline: none;
     cursor: pointer;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: transparent;
+      left: -35px;
+      bottom: 65px;
+      width: 1250px;
+      height: 650px;
+
+      @media (max-width: 1800px) {
+        height: 500px;
+        width: 1000px;
+      }
+      @media (max-width: 1440px) {
+        height: 400px;
+        width: 800px;
+      }
+      @media (max-width: 1200px) {
+        height: 330px;
+        width: 700px;
+        bottom: 55px;
+      }
+      @media (max-width: 1000px) {
+        height: 270px;
+        width: 560px;
+        bottom: 45px;
+      }
+      @media (max-width: 630px) {
+        height: 270px;
+        width: 560px;
+        max-width: 1800%;
+        bottom: 40px;
+      }
+      @media (max-width: 580px) {
+        height: 270px;
+        width: 560px;
+        max-width: 1700%;
+        bottom: 40px;
+      }
+      @media (max-width: 550px) {
+        height: 210px;
+        width: 560px;
+        max-width: 1600%;
+        bottom: 37px;
+      }
+      @media (max-width: 530px) {
+        height: 210px;
+        width: 470px;
+        max-width: 470px;
+      }
+      @media (max-width: 500px) {
+        height: 210px;
+        width: 440px;
+        max-width: 440px;
+      }
+      @media (max-width: 480px) {
+        height: 210px;
+        width: 420px;
+        max-width: 420px;
+      }
+      @media (max-width: 460px) {
+        height: 210px;
+        width: 400px;
+        max-width: 400px;
+      }
+      @media (max-width: 450px) {
+        height: 175px;
+        width: 390px;
+        max-width: 390px;
+      }
+      @media (max-width: 440px) {
+        width: 380px;
+        max-width: 380px;
+      }
+      @media (max-width: 420px) {
+        width: 360px;
+        max-width: 360px;
+      }
+      @media (max-width: 400px) {
+        height: 155px;
+        width: 350px;
+        max-width: 350px;
+      }
+      @media (max-width: 380px) {
+        width: 330px;
+        max-width: 330px;
+      }
+      @media (max-width: 360px) {
+        width: 310px;
+        max-width: 310px;
+      }
+      @media (max-width: 330px) {
+        width: 280px;
+        max-width: 280px;
+      }
+      @media (max-width: 300px) {
+        width: 260px;
+        max-width: 260px;
+      }
+    }
   }
 
   .vjs-play-control.vjs-control.vjs-button {
@@ -538,29 +639,4 @@
       }
     }
   }
-}
-
-@media (max-width: 1000px) {
-  .video-wrapper {
-    .video {
-      border-radius: 20px;
-    }
-  }
-}
-
-@media (max-width: 900px) {}
-
-@media (max-width: 650px) {}
-
-// HLS
-
-.video-hls_wrapper {
-  width: 70%;
-  margin: 0 auto;
-}
-
-.video-hls {
-  box-shadow: $boxShadow;
-  outline: none;
-  border-radius: 40px;
 }

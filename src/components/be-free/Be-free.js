@@ -11,6 +11,7 @@ import CastingPoster from '../../files/castingImage.jpg'
 import { smoothJumpUp } from '../../utils/scroll-utils'
 
 import './Be-free.scss'
+import VideoJs from '../home/video/VideoJs';
 
 function BeFree({ done, setDone }) {
   const [borderActiveMarginLeft, setBorderActiveMarginLeft] = useState(0)
@@ -37,7 +38,11 @@ function BeFree({ done, setDone }) {
 
   return (
     <div className="befree">
-      <SimpleVideo image={CastingPoster} videoURL="http://lbefree.com/storage/casting/casting.mp4" title="casting" />
+      <VideoJs
+        title="casting"
+        videoURL="https://lbefree.com/storage/casting/casting.mp4"
+        image={CastingPoster}
+      />
       <header className="befree__header" style={{ marginTop: '50px' }}>
         <NavLink
           onClick={setBorderFollow} className="befree__header-item" to="/befree/follow">
