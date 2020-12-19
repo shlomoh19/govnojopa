@@ -1,18 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import './index.scss';
 import App from './App';
 import { BrowserRouter } from "react-router-dom";
 
 import './i18n'
 
+const rootElement = document.getElementById('root')
 
-ReactDOM.render(
+const routes =
     <React.StrictMode>
         <BrowserRouter>
             <App />
         </BrowserRouter>
-    </React.StrictMode>,
-    document.getElementById('root')
-);
+    </React.StrictMode>
+
+render(routes, rootElement);
 

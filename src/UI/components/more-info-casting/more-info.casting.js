@@ -1,13 +1,14 @@
-import React, {useState} from 'react'
-import {useTranslation} from "react-i18next";
+import React, { useState } from 'react'
+import { useTranslation } from "react-i18next";
 import './more-info-casting.scss'
 import '../../../components/be-free/components/casting/Casting.scss'
 import '../../../components/be-free/Be-free.scss'
+import ArrowDownIcon from '../../icons/ArrowDownIcon';
 
 
 const CastingInfo = () => {
     const [isOpenMoreInfo, setIsOpenMoreInfo] = useState(false);
-    const {t} = useTranslation()
+    const { t } = useTranslation()
 
     const toggleMoreInfo = () => setIsOpenMoreInfo(!isOpenMoreInfo)
 
@@ -68,12 +69,11 @@ const CastingInfo = () => {
             </div>
             <p className={"casting_more-info"} onClick={toggleMoreInfo}>
                 <span> {isOpenMoreInfo ? 'HIDE' : t('casting.moreInfo.text')} </span>
-                <i
+                <ArrowDownIcon
                     style={isOpenMoreInfo
-                        ? { color: 'grey', marginLeft: '10px', transform: 'rotate(180deg)' }
-                        : {color: 'grey', marginLeft: '10px'}}
-                    className="fas fa-angle-down"
-                />
+                        ? { marginLeft: '10px', transform: 'rotate(180deg)' }
+                        : { marginLeft: '10px' }
+                    } />
             </p>
         </div>
     )

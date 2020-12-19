@@ -2,6 +2,7 @@
 
 .contacts-form-container {
   margin-bottom: 50px;
+  color: $darkGrey;
 }
 
 .contacts-container {
@@ -23,6 +24,10 @@
     margin-right: 7px;
     cursor: pointer;
   }
+}
+
+.befree-title-blue {
+  color: $blue
 }
 
 .contacts-text-grey {

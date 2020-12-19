@@ -1,13 +1,16 @@
-import React, { useEffect } from 'react'
-import Team from "./team/Team";
-import './Home.scss'
+import React, { lazy, useEffect, Suspense } from 'react'
 import { useTranslation } from "react-i18next";
-import TeamImage from '../../files/TeamPicture.jpg';
 import { smoothJumpUp } from '../../utils/scroll-utils';
 import VideoJs from './video/VideoJs';
 
+import './Home.scss'
+
+const TeamWrapperLazy = lazy(() => import('./team/Team'))
+
 const Home = () => {
     const { t } = useTranslation()
+
+    const TeamImage = 'https://lbefree.com/storage/casting/TeamPicture.jpg';
 
     useEffect(() => {
         smoothJumpUp()
@@ -28,7 +31,9 @@ const Home = () => {
             />
 
             <div className="home__title"> {t('team.subtitle.text')} </div>
-            <Team />
+            <Suspense fallback={<div>Loading...</div>}>
+                <TeamWrapperLazy/>
+            </Suspense>
         </div>
     )
 }

@@ -1,18 +1,26 @@
 import React, { useState } from 'react'
-import Founder from '../../../files/team/Lilit_founder.mp4'
-import FounderImg from '../../../files/team/images/Lilit_founder.jpg'
 import People from './People'
 import InstagramIcon from '../../../UI/icons/InstagramIcon'
-import './Team.scss'
 import YoutubeIcon from '../../../UI/icons/YoutubeIcon'
 import FacebookIcon from '../../../UI/icons/FacebookIcon'
+
+import './Team.scss'
+import ArrowDownIcon from '../../../UI/icons/ArrowDownIcon'
+
 
 export default function () {
     const [openTeam, setOpen] = useState(false)
     const openTeamHandler = () => setOpen(!openTeam)
 
     const playHandler = event => event.target.play()
-    const pauseHandler = event => event.target.pause()
+    const pauseHandler = event => {
+        event.target.currentTime = 0
+        event.target.pause()
+    } 
+    
+
+    const Founder = 'https://lbefree.com/storage/casting/team/Lilit_founder.mp4'
+    const FounderImg = 'https://lbefree.com/storage/casting/team/images/Lilit_founder.jpg'
 
     return (
         <div className="main__team">
@@ -43,19 +51,20 @@ export default function () {
             {/*MOBILE MENU BUTTON*/}
             <div onClick={openTeamHandler} className="team__button-mobile">
                 <span>{openTeam ? 'Close the Team' : 'Our Team'}</span>
-                <i style={openTeam ? { transform: 'rotate(180deg)' } : null} className="fas fa-angle-down" />
+                <ArrowDownIcon style={openTeam ? { transform: 'rotate(180deg)' } : null}/>
             </div>
 
             {/*TEAM*/}
             <div className={openTeam ? "team__items team-open" : "team__items"}>
                 {
                     People.map(person => {
-                        const { id, position, FIO, photo, video } = person
+                        const { id, position, FIO, photo, video, webp } = person
                         return (
                             <div key={id} className="team__item">
                                 {
                                     video
                                         ? <video
+                                            
                                             loop
                                             className="team__photo"
                                             poster={photo}
@@ -64,7 +73,10 @@ export default function () {
                                             src={video}
                                         >
                                         </video>
-                                        : <img className="team__photo" src={photo} alt="sorry bro :'(" />
+                                        :<picture>
+                                            <source srcset={webp} type="image/webp"/>
+                                            <img className="team__photo" src={photo} alt="sorry bro :'(" />
+                                        </picture>
                                 }
                                 <div className="team__desc">
                                     <span className="team__item-position">{position}</span>

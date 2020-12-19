@@ -6,14 +6,15 @@ import Donate from "./components/donate/Donate";
 import JoinTheTeam from './components/join/JoinTheTeam'
 import DonePage from '../done/Done';
 import { useTranslation } from "react-i18next";
-import CastingPoster from '../../files/castingImage.jpg'
 import { smoothJumpUp } from '../../utils/scroll-utils'
+import VideoJs from '../home/video/VideoJs';
 
 import './Be-free.scss'
-import VideoJs from '../home/video/VideoJs';
 
 function BeFree({ done, setDone }) {
   const [borderActiveMarginLeft, setBorderActiveMarginLeft] = useState(0)
+
+  const CastingPoster = 'https://lbefree.com/storage/casting/castingImage.jpg'
 
   useEffect(() => {
     smoothJumpUp()

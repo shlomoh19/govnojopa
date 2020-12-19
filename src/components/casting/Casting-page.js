@@ -5,12 +5,11 @@ import CastingForm from "../../UI/components/casting-form/casting-form";
 import DonePage from '../done/Done';
 import { useTranslation } from 'react-i18next';
 import { useHttp } from '../../hooks/hook.http';
-import CastingPoster from '../../files/castingImage.jpg';
 import { smoothJumpUp } from '../../utils/scroll-utils';
 
-import './Casting-page.scss'
 import VideoJs from '../home/video/VideoJs';
 import CircularProgressbar from '../../UI/components/circular-rogressbar/circular-progressbar';
+import './Casting-page.scss'
 
 const CastingPage = ({ done, setDone }) => {
     const [percent, setPercent] = useState(0)
@@ -20,8 +19,8 @@ const CastingPage = ({ done, setDone }) => {
     const [alreadyRegistered, setAlreadyRegistered] = useState(0)
 
     const { t } = useTranslation()
-
     const { request } = useHttp()
+    const CastingPoster = 'https://lbefree.com/storage/casting/castingImage.jpg';
 
     useEffect(() => {
         smoothJumpUp()

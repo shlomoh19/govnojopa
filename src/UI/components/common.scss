@@ -1,0 +1,59 @@
+@import '../style.scss';
+
+.field_wrapper {
+    position: relative;
+    width: 100%;
+    text-align: center;
+
+    .input_error {
+        position: absolute;
+        left: 0;
+        top: -13px;
+        font-size: 12px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        transition: opacity ease-in .2s;
+        opacity: 0;
+        color: $warning;
+    }
+
+    .error_visible {
+        opacity: 1;
+    }
+
+    .input-error {
+        border: 1px solid $warning;
+        background-color: $secondary_warning;
+        transition: all ease-in .2s;
+    }
+
+    .field_placeholder {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -200%);
+        cursor: text;
+        transition: all ease-in .2s;
+        opacity: 0;
+        font-size: 14px;
+    }
+
+    .visible {
+        transform: translate(-50%, -100%);
+        opacity: 1 !important;
+    }
+}
+
+.input-error {
+    border: 1px solid $warning;
+    background-color: $secondary_warning;
+    transition: all ease-in .2s;
+}
+
+.error_wrapper {
+    color: $warning;
+    margin-bottom: 30px;
+    max-width: 300px;
+    text-align: center;
+}

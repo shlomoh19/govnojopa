@@ -114,7 +114,7 @@ const Contacts = ({ done, setDone }) => {
 
             <h1 className="contacts-title">
               <span className="befree-title-blue">
-                {t('contacts.title.blue')}
+                {t('contacts.title.blue')} {' '}
               </span>
               {t('contacts.title')}
             </h1>

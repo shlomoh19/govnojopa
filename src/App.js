@@ -4,18 +4,18 @@ import { Route } from "react-router-dom";
 import Home from "./components/home/Home";
 import Footer from "./components/footer/Footer";
 import MobileMenu from './components/mobile-menu/Mobile-menu';
-import Contacts from './components/contacts/Contacts';
 import Spinner from './components/spinner/Spinner';
 import BefreeSkeleton from './components/be-free/be-free-skeleton';
 import CastingSkeleton from './components/casting/CastingSkeleton';
-import './App.scss';
 import CookiePopup from './components/cookie-popup/cookie-popup';
 import { getCookiesByName, setAgreeWithCookies } from './utils/cookies';
 
+import './App.scss';
 
 
 const BefreeLazy = lazy(() => import('./components/be-free/Be-free'))
 const CastingPageLazy = lazy(() => import('./components/casting/Casting-page'))
+const ContactsPageLazy = lazy(() => import('./components/contacts/Contacts'))
 
 function App() {
     const [mobileMenu, setMobileMenu] = useState(false)
@@ -59,6 +59,7 @@ function App() {
                     <div className="content-wrapper">
                         <div onClick={mobileMenuHandler} style={mobileMenu ? menuActive : menuUnActive} className="Open-menu-content" />
                         <Route exact path="/" component={Home} />
+
                         <Route path="/befree/:id" render={() => {
                             return (
                                 <Suspense fallback={<BefreeSkeleton />}>
@@ -66,7 +67,14 @@ function App() {
                                 </Suspense>
                             )
                         }} />
-                        <Route path="/contacts" render={() => <Contacts done={done} setDone={setDone} />} />
+
+                        <Route path="/contacts" render={() => {
+                            return (
+                                <Suspense fallback={<CastingSkeleton />}>
+                                    <ContactsPageLazy done={done} setDone={setDone} />
+                                </Suspense>
+                            )
+                        }} />
 
                         <Route path="/casting" render={() => {
                             return (

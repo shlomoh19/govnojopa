@@ -12,6 +12,9 @@
     @media (max-width: 1440px) {
       transform: scale(1.1);
     }
+    @media (max-width: 500px) {
+      transform: scale(1);
+    }
   }
   #svg #bar {
     stroke: $blue;
