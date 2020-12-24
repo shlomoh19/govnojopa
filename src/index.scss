@@ -4,6 +4,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 24px;
+  font-display: swap;
 }
 
 
@@ -19,3 +20,11 @@ body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
 }
+
+input, input:before, input:after {
+  -webkit-user-select: initial;
+  -khtml-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
+ } 

@@ -79,6 +79,7 @@ const CastingForm = ({ setDone }) => {
     }
 
     const sendForm = async () => {
+        clearError()
         try {
             if (phone(form.phone, '').length > 0) {
                 if (validateEmail(form.email)) {

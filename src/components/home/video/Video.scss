@@ -132,13 +132,13 @@
     .vjs-time-tooltip {
       background-color: #e53935;
       border-radius: 10px;
-      font-size: 3px;
+      font-size: 5px;
       color: #e53935;
       transition: all ease-in .1s;
 
       &:hover {
-        font-size: 10px;
-        border-radius: 0;
+          font-size: 10px;
+          border-radius: 0;
       }
     }
   }
@@ -269,7 +269,7 @@
       content: "";
       background-color: transparent;
       left: -35px;
-      bottom: 65px;
+      bottom: 70px;
       width: 1250px;
       height: 650px;
 
@@ -292,19 +292,19 @@
         bottom: 45px;
       }
       @media (max-width: 630px) {
-        height: 270px;
+        height: 260px;
         width: 560px;
         max-width: 1800%;
         bottom: 40px;
       }
       @media (max-width: 580px) {
-        height: 270px;
+        height: 250px;
         width: 560px;
         max-width: 1700%;
         bottom: 40px;
       }
       @media (max-width: 550px) {
-        height: 210px;
+        height: 200px;
         width: 560px;
         max-width: 1600%;
         bottom: 37px;
@@ -326,7 +326,7 @@
         max-width: 400px;
       }
       @media (max-width: 450px) {
-        height: 175px;
+        height: 165px;
         width: 390px;
         max-width: 390px;
       }
@@ -339,7 +339,7 @@
         max-width: 360px;
       }
       @media (max-width: 400px) {
-        height: 155px;
+        height: 145px;
         width: 350px;
         max-width: 350px;
       }

@@ -75,7 +75,7 @@ export default function () {
                                         </video>
                                         :<picture>
                                             <source srcset={webp} type="image/webp"/>
-                                            <img className="team__photo" src={photo} alt="sorry bro :'(" />
+                                            <img width="100%" className="team__photo lazyload" data-src={photo} alt="sorry bro :'(" />
                                         </picture>
                                 }
                                 <div className="team__desc">

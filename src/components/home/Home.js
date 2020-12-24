@@ -26,7 +26,7 @@ const Home = () => {
             </div>
             <VideoJs
                 title="team"
-                videoURL="http://lbefree.com/storage/casting/team-video.mp4"
+                videoURL='https://lbefree.com/storage/m3u8/casting/casting.m3u8'
                 image={TeamImage}
             />
 

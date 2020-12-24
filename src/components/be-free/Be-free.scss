@@ -4,6 +4,12 @@
   margin-bottom: 100px;
   margin-top: 50px;
 }
+.befree__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .befree__header {
   position: relative;
   display: flex;
@@ -35,6 +41,9 @@
 }
 .befree__title {
   font-weight: 400;
+  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .befree-title-blue {

@@ -33,7 +33,7 @@ const PhoneField = ({ changeHandler, placeholder }) => {
             <div className="container-tel">
                 <div className="tel-box">
                     <div className="select-box" onChange={countryFlagHandler}>
-                        <img src={phoneState.flagImg} className="after_select" id="img" />
+                        <img src={phoneState.flagImg} className="after_select lazyload" id="img" />
                         <select
                             ref={countrySelect}
                             id="country"
