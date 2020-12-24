@@ -28,8 +28,7 @@
   },
   "casting.steps.text.one": "Enregistrez une vidéo dans laquelle vous répondez à nos questions et terminez la mission.",
   "casting.steps.text.two": "Téléchargez cette vidéo sur au moins 2 de tous les réseaux sociaux en ligne(ou bien les plateformes en ligne). Nous vous conseillons d'utiliser des réseaux sociaux et / ou les plateformes en ligne où vous avez le plus d'amis. Par exemple, vous pouvez utiliser les combinaisons suivantes:  YouTube + Instagram, YouTube + Facebook, YouTube + TikTok, Vimeo + Instagram… ou utilisez deux autres plateformes sociales.",
-  "casting.steps.text.three": "Fill out an application by attaching 2 links to this video. It is important that accounts are open and videos are public. Attention! Do not delete these videos until the casting is complete. - étape 3. Remplissez une demande en attachant 2 liens à cette vidéo. Il est important que les comptes soient ouverts et que les vidéos soient publiques. Attention! Ne supprimez pas ces vidéos tant que le casting n'est pas encore terminée.",
-  "casting.moreInfo.text": "PLUS D’INFORMATIONS",
+"casting.steps.text.three": "Remplissez une demande en joignant 2 liens vers cette vidéo. Il est important que les comptes soient ouverts et que les vidéos soient publiques. Attention! Ne supprimez pas ces vidéos avant la fin du casting." 
   "casting.moreInfo.videoReq.title": "Exigences de la video:",
   "casting.moreInfo.videoReq.one": "1. La vidéo ne doit pas durer plus de 5 minutes au maximum.",
   "casting.moreInfo.videoReq.two": "2. La vidéo doit comporter des réponses exact aux questions et la réalisation des missions.",
@@ -38,7 +37,7 @@
   "casting.moreInfo.videoContent.title": "Contenu vidéo requis:",
   "casting.moreInfo.videoContent.one": "1. Présentez-vous (Nom et Prenom)",
   "casting.moreInfo.videoContent.two": "2. Dis nous c´est quoi votre pays",
-  "casting.moreInfo.videoContent.three": "3. Dites-nous pourquoi vous participez au casting. (Par exemple, vous filmez une vidéo pour notre casting á l´objective de participation avec l'équipe mondiale de football)",
+  "casting.moreInfo.videoContent.three": "3. Dis nous pourquoi vous participez au casting. (Par exemple, vous participez á l´objective de participation avec l'équipe mondiale de football)",
   "casting.moreInfo.videoContent.four": "4.Répondre à la question. Que signifie le football pour vous?",
   "casting.moreInfo.videoContent.five": "5. Completer les tâches techniques: Attention! Pour les gardiens de but, les tâches sont différentes.",
   "casting.moreInfo.goalkeeper.title": " Si vous vous considérez comme un gardien de but: Vous pouvez choisir une tâche ou plus",
@@ -56,7 +55,7 @@
 
   "contacts": "CONTACTS",
   "contacts.title": "",
-  "contacts.title.blue": "CONNECTEZ-NOUS",
+  "contacts.title.blue": "CONTACTEZ-NOUS",
   "contacts.text": "Vous pouvez nous contacter pour toute question, y compris la coopération.",
 
   "donate": "FAIRE UN BON",
