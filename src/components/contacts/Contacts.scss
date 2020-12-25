@@ -20,9 +20,12 @@
   align-items: center;
   margin-bottom: 50px;
 
-  svg {
+  a {
     margin-right: 7px;
     cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 

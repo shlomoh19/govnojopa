@@ -51,18 +51,9 @@ const CastingPage = ({ done, setDone }) => {
                         image={CastingPoster}
                     />
                     <div style={{ textAlign: 'center' }}>
-                        <h2 style={{ fontWeight: '400', fontSize: '30px' }}> {alreadyRegistered} </h2>
-                        <span> {t('casting.already.registred')} </span>
-                        <div className={"circle-flex"}>
-                            <div className={'circle-item'}>
-                                <CircularProgressbar title={daysToEnd} percent={percent} />
-                                <span> {t('days')} </span>
-                            </div>
-                            <div className={'circle-item'}>
-                                <CircularProgressbar title={hoursToEnd} percent={percent} />
-                                <span> {t('hours')} </span>
-                            </div>
-                        </div>
+                        <p className="registered_count"> {alreadyRegistered} </p>
+                        <span className="registered_title"> {t('casting.already.registred')} </span>
+                        <CircularProgressbar days={daysToEnd} hours={hoursToEnd} />
                     </div>
                     <div className="befree-container">
                         <CastingInfo />

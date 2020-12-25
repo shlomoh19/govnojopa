@@ -103,7 +103,7 @@ const Contacts = ({ done, setDone }) => {
         : (
           <div className="contacts-container">
             <h2 className="contacts-title"> {t('contacts')} </h2>
-            <p>GOAL@LBEFREE.COM</p>
+            <p className="contacts_email">GOAL@LBEFREE.COM</p>
             <div className="contacts__icon-wrapper">
               <FacebookIcon href="https://www.facebook.com/lbefree/" />
               <InstagramIcon href="https://www.instagram.com/goalbefree/" />

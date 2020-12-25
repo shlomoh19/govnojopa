@@ -1,29 +1,26 @@
 @import '../../UI/style.scss';
 
-.circle {
-  width: 100px;
-  height: 100px;
-  stroke: $blue;
-  fill: $blue;
-}
-
-.circle-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.circle-flex {
-  display: flex;
-  justify-content: space-between;
-  width: 40%;
-  max-width: 400px;
-  margin: 0 auto;
-  margin-top: 30px;
-  @media (max-width: 900px) {
-    width: 60%;
+.registered_count {
+  font-size: 70px;
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: $blue;
+  font-family: 'Roboto', sans-serif;
+  @media (max-width: 400px) {
+    font-size: 50px;
   }
-  @media (max-width: 450px) {
-    width: 85%;
+  @media (max-width: 300px) {
+    font-size: 40px;
+  }
+}
+.registered_title {
+  font-size: 30px;
+  color: $darkGrey;
+  @media (max-width: 400px) {
+    font-size: 22px;
+  }
+  @media (max-width: 300px) {
+    font-size: 18px;
   }
 }
