@@ -6,7 +6,7 @@ import { initReactI18next } from 'react-i18next';
 i18n
     .use(Backend).use(LanguageDetector).use(initReactI18next).init({
         fallbackLng: 'en',
-        debug: true,
+        debug: false,
         keySeparator: false,
         interpolation: {
             escapeValue: false
