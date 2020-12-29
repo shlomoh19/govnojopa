@@ -3,7 +3,7 @@
   "team": "EQUIPE",
   "team.title.text": "Nous faisons plus qu'un projet social. Nous créons l'avenir",
   "team.subtitle.text": 
-  "Nous rassemblons autour de nous des personnes talentueuses, déterminées et dotées d'un grand cœur. Et nous continuerons de le faire quoi qu'il arrive et pour toujours",
+  "Nous rassemblons autour de nous des personnes talentueuses, déterminées et dotées d'un grand cœur. Et nous continuerons de le faire peu importe ce qu'il arrive et pour toujours",
 
   "befree": "SOIS LIBRE",
   "befree.phrase": "sois libre",
@@ -11,9 +11,9 @@
   "casting": "CASTING",
   "casting.title": "ÉQUIPE DU FOOTBALL",
   "casting.title.blue": "REJOIGNEZ NOTRE",
-  "casting.text.one": "Le casting pour selection des des joueurs est ouvert maintenant.",
+  "casting.text.one": "Le casting pour sélectionner des joueurs est ouvert maintenant.",
   "casting.text.two": 
-  "Le casting est organisé partout les gens du monde de plus de 18 ans dans un format en ligne.",
+  "Le casting est organisé partout les gens du monde de plus de 18 ans, en utilisant un format en ligne.",
   "casting.text.three": "Dépêchez-vous de soumettre votre candidature avant février 28, 2021",
   "casting.text.four": "Utilisez la langue Anglais pour compléter votre candidature.",
   "casting.text.five": "",
@@ -27,12 +27,12 @@
     "three": "Schritt 3."
   },
   "casting.steps.text.one": "Enregistrez une vidéo dans laquelle vous répondez à nos questions et terminez la mission.",
-  "casting.steps.text.two": "Téléchargez cette vidéo sur au moins 2 de tous les réseaux sociaux en ligne(ou bien les plateformes en ligne). Nous vous conseillons d'utiliser des réseaux sociaux et / ou les plateformes en ligne où vous avez le plus d'amis. Par exemple, vous pouvez utiliser les combinaisons suivantes:  YouTube + Instagram, YouTube + Facebook, YouTube + TikTok, Vimeo + Instagram… ou utilisez deux autres plateformes sociales.",
-"casting.steps.text.three": "Remplissez une demande en joignant 2 liens vers cette vidéo. Il est important que les comptes soient ouverts et que les vidéos soient publiques. Attention! Ne supprimez pas ces vidéos avant la fin du casting." 
+  "casting.steps.text.two": "Téléchargez cette vidéo sur au moins 2 réseaux sociaux(ou bien des plateformes en ligne). Nous vous conseillons d'utiliser des réseaux sociaux et / ou les plateformes en ligne où vous avez le plus nombre d'amis. Par exemple, vous pouvez utiliser les combinaisons suivantes:  YouTube + Instagram, YouTube + Facebook, YouTube + TikTok, Vimeo + Instagram… ou utilisez deux autres plateformes sociales.",
+"casting.steps.text.three": "Remplissez une demande en joignant 2 liens vers cette vidéo. Il est important que les comptes soient ouverts et que les vidéos soient publiques. Attention! Ne supprimez pas ces deux vidéos pendant le casting." 
   "casting.moreInfo.videoReq.title": "Exigences de la video:",
   "casting.moreInfo.videoReq.one": "1. La vidéo ne doit pas durer plus de 5 minutes au maximum.",
   "casting.moreInfo.videoReq.two": "2. La vidéo doit comporter des réponses exact aux questions et la réalisation des missions.",
-  "casting.moreInfo.videoReq.three": "3. Pendant la description du vidéo, veuillez écrire le texte(lyrics ou paroles) que vous direz sur votre vidéo. Cela nous aidera à vous comprendre si vous utilisez une langue autre que l'anglais. Il est très nécessaire d'écrire des phrases(paroles) exact que vous avez déjà dit en votre vidéo, bien sur ca c'est obligé si vous avez utilisé une autre langue que l´anglais. Vous pouvez utiliser n'importe quelle langue",
+  "casting.moreInfo.videoReq.three": "3. Pendant la description du vidéo, veuillez écrire un texte(lyrics ou paroles) que vous avez dit sur votre vidéo. Cela nous aidera à vous comprendre si vous utilisez une langage autre que l'anglais. Il est très nécessaire d'écrire des phrases(paroles) exact que vous avez déjà dit en votre vidéo, bien sur ca c'est obligé si vous avez utilisé une autre langue que l´anglais. Vous pouvez utiliser n'importe quelle langue",
   "casting.moreInfo.videoReq.four": "4. Assurez-vous que votre vidéo est bonne, afin que nous puissions vous entendre et vous voir clairement( on prend pas la qualité de vidéo en considération)  :)",
   "casting.moreInfo.videoContent.title": "Contenu vidéo requis:",
   "casting.moreInfo.videoContent.one": "1. Présentez-vous (Nom et Prenom)",
@@ -48,7 +48,7 @@
   "casting.moreInfo.soccer.title": "Si vous n'êtes pas gardien de but: Vous pouvez choisir une tâche ou plus",
   "casting.moreInfo.soccer.one": "1. Test de dribble (droite et gauche) - Une fois pied droit seulement, une fois pied gauche seulement.",
   "casting.moreInfo.soccer.two": "2. Test de jonglerie - Vous devez obtenir autant de jongles que possible en utilisant uniquement les pieds, les cuisses et la tête.",
-  "casting.moreInfo.soccer.three": "3. Courir avec le ballon - Vous devez courir aussi vite que possible tout en gardant le ballon sous contrôle.",
+  "casting.moreInfo.soccer.three": "3. Courir avec le ballon - Vous devez courir aussi vite que possible en gardant le ballon sous contrôle.",
   "casting.moreInfo.soccer.four": "4. Liberté absolue. Ici vous pouvez montrer ce que vous pensez est nécessaire. Montrez votre meilleur côté footballistique.",
   "casting.page.end": "Projet social international. Toutes les étapes de participation au casting sont absolument gratuites. En remplissant cette demande, vous nous autorisez à utilisions, modifions et transférions vos données.",
   "casting.checkbox": "J'accepte tous les conditions",
@@ -61,26 +61,26 @@
   "donate": "FAIRE UN BON",
   "donate.title": "SI VOUS POUVEZ ET SI VOUS VOULEZ",
   "donate.text.one": 
-  "Nous sommes des gars simples de différents pays, unis pour réaliser quelque chose de génial le rendre accessible à tous.",
+  "Nous sommes des gens simples de différents pays, unis pour réaliser quelque chose de génial et le rendre accessible à tous.",
   "donate.text.two": "Si vous aimez notre idée, ce que nous faisons ou ce que nous recherchons, vous pouvez nous aider.",
-  "donate.text.three": "P.S. Veuillez ne pas envoyer d'argent si vous participez au casting.",
+  "donate.text.three": "P.S. Veuillez ne pas faire un bon si vous participez au casting.",
   "donate.text.four": 
-  "Toutes les étapes du casting sont absolument gratuites et ne nécessitent rien de votre part sauf le désir et le travail sur sois-même",
+  "Toutes les étapes du casting sont absolument gratuites et ne nécessitent rien de votre part sauf le désir et le travail sur vous-même",
 
   "joinTheTeam": "rejoins l'équipe",
   "joinTheTeam.title": "REJOIGNEZ NOTRE",
   "joinTheTeam.title.blue": "ÉQUIPE CRÉATIVE",
   "joinTheTeam.text.one": "Nous cherchons toujours de bons talents",
   "joinTheTeam.text.two": 
-  "Programmeurs, opérateurs, vidéastes, designers, traducteurs, ingénieurs du son, spécialistes du marketing, entraîneurs de fitness, nutritionnistes, entraîneurs, médecins ... et bien d'autres.",
+  "Programmeurs, opérateurs, vidéastes, designers, traducteurs, ingénieurs du son, spécialistes du marketing, entraîneurs de fitness, nutritionnistes, entraîneurs, médecins ...etc et bien d'autres.",
   "joinTheTeam.text.three": 
-  "soumettre votre candidature pour faire partie de notre équipe, nous vous contacter sans aucun doute.",
+  "soumettre votre candidature pour rejoigner notre équipe, nous vous contacter, aucun doute pour cela.",
 
   "follow": "SUIVRE",
   "follow.title.blue": "SUIVEZ",
   "follow.title": " NOS ACTUALITÉS",
 
-  "name": "Prénom",
+  "name": "PRÉNOM",
   "surname": "NOM",
   "phone": "TÉLÉPHONE",
   "link.video": "LIEN VERS LA VIDÉO",
@@ -89,7 +89,7 @@
   "transmittalLater": "LETTRE DE TRANSMISSION",
   "email": "Email",
   "send": "Soumettre",
-  "days": " Jours",
-  "hours": "Heures",
+  "days": " JOURS",
+  "hours": "HEURES",
   "not.now": "PAS MAINTENANT"
 }
