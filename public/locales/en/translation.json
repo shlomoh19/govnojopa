@@ -12,7 +12,7 @@
   "casting.title": "JOIN OUR",
   "casting.title.blue": "SOCCER TEAM",
   "casting.text.one": 
-  "The casting for a player's place  in the world football team is open*.",
+  "The casting for a player's place in the world football team is open*.",
   "casting.text.two": 
   "Casting is held all over the world among all guys over 18 years old in a online format.",
   "casting.text.three": "Hurry up to submit your application before February 28, 2021.",
@@ -34,18 +34,18 @@
   "casting.moreInfo.videoReq.title": "Video requirements:",
   "casting.moreInfo.videoReq.one": "1. The video should be NO LONGER than 5 minutes.",
   "casting.moreInfo.videoReq.two": "2. The video should include answering questions and completing assignments.",
-  "casting.moreInfo.videoReq.three": "3. In the description for the video, please write the text that you will say on the video.This will help us understand you if you use any language other than English. There is no need to invent anything, just duplicate with text everything that you said in the video. You can use any language.",
+  "casting.moreInfo.videoReq.three": "3. In the description for the video, please write the text that you will say in the video. This will help us understand you if you use any language other than English. There is no need to invent anything, just duplicate with text everything that you said in the video. You can use any language.",
   "casting.moreInfo.videoReq.four": "4. We do not impose any requirements on the quality of the video, the main thing is that we can see and hear you :)",
   "casting.moreInfo.videoContent.title": "Required video content:",
   "casting.moreInfo.videoContent.one": "1. Introduce yourself (Name and Surname)",
   "casting.moreInfo.videoContent.two": "2. Tell us which country you are from",
   "casting.moreInfo.videoContent.three": "3. Tell us why you are participating in the casting. (For example, you shoot a video for our casting to get into the world soccer team)",
-  "casting.moreInfo.videoContent.four": "4. Answer the question. What does football mean to you?",
+  "casting.moreInfo.videoContent.four": "4. Answer the question of: What does football mean to you?",
   "casting.moreInfo.videoContent.five": "5. Complete technical tasks: Attention! For goalkeepers and everyone else, the tasks are different.",
   "casting.moreInfo.goalkeeper.title": "If you consider yourself a goalkeeper: You can choose any 1 tasks or more",
   "casting.moreInfo.goalkeeper.one": "1. The goalkeeper should protecting the goal closely from a player (short shootings)",
   "casting.moreInfo.goalkeeper.two": "2. You must protect the ball from the players, while a player shot a corner",
-  "casting.moreInfo.goalkeeper.three": "3. Free kicks shots (You needs a player to shot the ball far away from you, more than 20m)",
+  "casting.moreInfo.goalkeeper.three": "3. Free kicks shots (You need a player to be away from you more than 20m, and he should shoting the ball towards you),",
   "casting.moreInfo.goalkeeper.four": "4. Absolute freedom. Here you can show whatever you think is necessary. Show your best football side.",
   "casting.moreInfo.soccer.title": "If you are not a goalkeeper: You can choose any 1 tasks or more",
   "casting.moreInfo.soccer.one": "1. Dribble Test (Right & Left) - One time right foot only, one time left foot only.",
@@ -67,14 +67,14 @@
   "donate.text.one": 
   "We are simple guys from different countries, united to do something great.",
   "donate.text.two": "If you like our idea, what we do or what we strive for, you can support us.",
-  "donate.text.three": "P.S. Please do not send money if you are participating in the casting.",
+  "donate.text.three": "P.S. Please do not donate if you are participating in the casting.",
   "donate.text.four": 
   "All stages of casting are absolutely free and do not require anything from you except desire and work on yourself.",
 
   "joinTheTeam": "JOIN THE TEAM",
   "joinTheTeam.title": "JOIN OUR",
   "joinTheTeam.title.blue": "CREATIVE TEAM",
-  "joinTheTeam.text.one": "We are always on the lookout for talent.",
+  "joinTheTeam.text.one": "We are always looking for talent.",
   "joinTheTeam.text.two": 
   "Programmers, operators, videographers, designers, translators, sound engineers, marketers, fitness trainers, nutritionists, trainers, doctors ...etc, and many others.",
   "joinTheTeam.text.three": 
@@ -87,13 +87,13 @@
   "name": "NAME",
   "surname": "SURNAME",
   "phone": "PHONE",
-  "link.video": "LINK TO VIDEO",
-  "link.video.instagram": "LINK TO VIDEO FROM INSTAGRAM",
+  "link.video": "LINK TO THE VIDEO",
+  "link.video.instagram": "LINK TO THE VIDEO FROM INSTAGRAM",
   "link.summary": "LINK TO SUMMARY",
   "transmittalLater": "TRANSMITTAL LETTER",
   "email": "EMAIL",
   "send": "SEND",
   "days": " Days",
   "hours": "Hours",
-  "not.now": "PAS MAINTENANT"
+  "not.now": "NOT NOW"
 }
