@@ -41,9 +41,14 @@
 }
 .befree__title {
   font-weight: 400;
-  text-align: center;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.befree_date {
+  font-size: 25px;
+  color: $blue;
 }
 
 .befree-title-blue {

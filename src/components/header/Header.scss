@@ -36,6 +36,14 @@
       color: $blue;
     }
   }
+  .header__logo-wrapper {
+    text-decoration: none;
+    color: $blue;
+    transition: all ease-in .2s;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
 }
 
 .main_wrapper {

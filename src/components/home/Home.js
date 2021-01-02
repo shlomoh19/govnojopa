@@ -2,6 +2,7 @@ import React, { lazy, useEffect, Suspense } from 'react'
 import { useTranslation } from "react-i18next";
 import { smoothJumpUp } from '../../utils/scroll-utils';
 import VideoJs from './video/VideoJs';
+import TeamVideo from '../../files/TeamVideo.mp4'
 
 import './Home.scss'
 
@@ -25,14 +26,15 @@ const Home = () => {
                 </div>
             </div>
             <VideoJs
-                title="team"
-                videoURL='https://lbefree.com/storage/m3u8/casting/casting.m3u8'
+                videoURL={TeamVideo}
+                title=""
+                // videoURL='https://lbefree.com/storage/casting/team-video.mp4'
                 image={TeamImage}
             />
 
             <div className="home__title"> {t('team.subtitle.text')} </div>
             <Suspense fallback={<div>Loading...</div>}>
-                <TeamWrapperLazy/>
+                <TeamWrapperLazy />
             </Suspense>
         </div>
     )

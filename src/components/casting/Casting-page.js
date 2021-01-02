@@ -6,13 +6,13 @@ import DonePage from '../done/Done';
 import { useTranslation } from 'react-i18next';
 import { useHttp } from '../../hooks/hook.http';
 import { smoothJumpUp } from '../../utils/scroll-utils';
+import VideoCasting from '../../files/casting.mp4'
 
 import VideoJs from '../home/video/VideoJs';
 import CircularProgressbar from '../../UI/components/circular-rogressbar/circular-progressbar';
 import './Casting-page.scss'
 
 const CastingPage = ({ done, setDone }) => {
-    const [percent, setPercent] = useState(0)
     const [daysToEnd, setDaysToEnd] = useState(0)
     const [hoursToEnd, setHoursToEnd] = useState(0)
 
@@ -24,17 +24,13 @@ const CastingPage = ({ done, setDone }) => {
 
     useEffect(() => {
         smoothJumpUp()
-        const castingStartDay = moment('2020-10-1');
         const now = moment(new Date());
-        const end = moment("2021-02-28");
+        const end = moment("2021-04-20");
         const durationDaysToEnd = moment.duration(end.diff(now));
         const daysToEnd = durationDaysToEnd.asDays();
         const hoursToEnd = durationDaysToEnd.asHours();
         setDaysToEnd(Math.round(daysToEnd));
-        setHoursToEnd(Math.round(hoursToEnd));
-        const durationAllDays = moment.duration(end.diff(castingStartDay)).asDays();
-        const completePercent = 100 - (daysToEnd * 100 / durationAllDays);
-        setPercent(completePercent)
+        setHoursToEnd(Math.round(hoursToEnd) % 24);
 
         request('https://lbefree.com/api/casting/counts/all').then(res => setAlreadyRegistered(res))
     }, []);
@@ -47,7 +43,8 @@ const CastingPage = ({ done, setDone }) => {
                 : <>
                     <VideoJs
                         title="casting-page"
-                        videoURL="https://lbefree.com/storage/casting/casting.mp4"
+                        videoURL={VideoCasting}
+                        // videoURL="https://lbefree.com/storage/casting/casting.mp4"
                         image={CastingPoster}
                     />
                     <div style={{ textAlign: 'center' }}>

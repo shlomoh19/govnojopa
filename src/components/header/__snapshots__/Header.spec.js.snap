@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Render Header component 1`] = `ShallowWrapper {}`;
+
+exports[`Header renders correctly 1`] = `
+<Fragment>
+  <header
+    className="header"
+  >
+    <NavLink
+      className="header__logo-wrapper"
+      to="/"
+    >
+      L.
+    </NavLink>
+    <div
+      className="header__main"
+    >
+      <NavLink
+        activeClassName="header__item-active"
+        className="header__item header__main-item"
+        exact={true}
+        to="/"
+      >
+        team
+      </NavLink>
+      <NavLink
+        activeClassName="header__item-active"
+        className="header__item header__main-item"
+        to="/befree/follow"
+      >
+        befree
+      </NavLink>
+      <NavLink
+        activeClassName="header__item-active"
+        className="header__item header__main-item"
+        to="/casting"
+      >
+        casting
+      </NavLink>
+      <NavLink
+        activeClassName="header__item-active"
+        className="header__item header__main-item"
+        to="/contacts"
+      >
+        contacts
+      </NavLink>
+    </div>
+    <div
+      className="locale__wrapper"
+      onClick={[Function]}
+    >
+      <div
+        className="locale__label"
+      >
+        locale
+        <i
+          className="fas fa-angle-down icon-arr"
+          style={null}
+        />
+      </div>
+      <LocaleMenu
+        openLocaleMenu={false}
+        setLocale={[Function]}
+      />
+    </div>
+    <div
+      className="header__menu-icon"
+    >
+      <span
+        className="menu-line menu-one"
+      />
+      <span
+        className="menu-line menu-two"
+      />
+      <span
+        className="menu-line menu-three"
+      />
+    </div>
+  </header>
+  <main
+    className="main_wrapper"
+  />
+</Fragment>
+`;

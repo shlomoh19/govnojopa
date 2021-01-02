@@ -6,14 +6,18 @@ import './Video.scss'
 const VideoJs = ({ videoURL, image, title }) => {
     const playerRef = useRef()
 
-    
+
 
     useEffect(() => {
-        const player = videojs(playerRef.current, { controlBar: true, loop: true }, () => {
+        const player = videojs(playerRef.current, {
+            controlBar: true,
+            loop: true,
+            preload: "none"
+        }, () => {
             player.src(videoURL);
             player.poster(image);
         });
-        
+
         return () => {
             player.dispose();
         };

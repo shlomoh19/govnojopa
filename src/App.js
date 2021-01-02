@@ -2,7 +2,6 @@ import React, { lazy, Suspense, useCallback, useEffect, useState } from 'react';
 import Header from "./components/header/Header";
 import { Route } from "react-router-dom";
 import Home from "./components/home/Home";
-import Footer from "./components/footer/Footer";
 import MobileMenu from './components/mobile-menu/Mobile-menu';
 import Spinner from './components/spinner/Spinner';
 import BefreeSkeleton from './components/be-free/be-free-skeleton';
@@ -16,6 +15,7 @@ import './App.scss';
 const BefreeLazy = lazy(() => import('./components/be-free/Be-free'))
 const CastingPageLazy = lazy(() => import('./components/casting/Casting-page'))
 const ContactsPageLazy = lazy(() => import('./components/contacts/Contacts'))
+const FooterLazy = lazy(() => import('./components/footer/Footer'))
 
 function App() {
     const [mobileMenu, setMobileMenu] = useState(false)
@@ -84,7 +84,9 @@ function App() {
                             )
                         }} />
                     </div>
-                    <Footer />
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <FooterLazy />
+                    </Suspense>
                 </Header>
             </div>
             {isShowCookiesPopup && <CookiePopup setCookiePopup={setAgreeCookie} />}

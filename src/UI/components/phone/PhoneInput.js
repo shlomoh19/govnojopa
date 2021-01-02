@@ -22,12 +22,14 @@ const PhoneField = ({ changeHandler, placeholder }) => {
 
 
     const countryFlagHandler = e => {
+        console.log(`./icons/${countrySelect.current.selectedOptions[0].dataset.countrycode.toLowerCase()}.png`)
         setPhoneState({
             ...phoneState,
             flagImg: require(`./icons/${countrySelect.current.selectedOptions[0].dataset.countrycode.toLowerCase()}.png`),
             codeValue: e.target.value
         });
     }
+
     return (
         <div className="page">
             <div className="container-tel">

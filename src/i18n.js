@@ -11,7 +11,8 @@ i18n
         interpolation: {
             escapeValue: false
         },
-    ns: ["translation", "locales"]
+        ns: ["translation", "locales"],
+        initImmediate: false
     });
 
 export default i18n;

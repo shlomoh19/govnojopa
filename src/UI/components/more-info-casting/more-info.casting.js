@@ -14,7 +14,15 @@ const CastingInfo = () => {
 
     return (
         <div className="befree-container">
-            <h2 className="befree-title"> {t('casting.title') + ' '}  <span className="befree-title-blue"> {t('casting.title.blue')} </span></h2>
+            <h2 className="befree-title">
+                {t('casting.title') + ' '}
+                <span className="befree-title-blue">
+                    {t('casting.title.blue')}
+                </span>
+            </h2>
+            <p className="befree_date">
+                20.01.2021 - 20.04.2021
+            </p>
             <p className="befree-text-casting">
                 {
                     t('casting.text.one') +

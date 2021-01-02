@@ -20,7 +20,7 @@ const Header = ({ mobileMenuHandler, mobileMenu, children }) => {
     return (
         <>
             <header className="header">
-                <div className="header__logo-wrapper">L.</div>
+                <NavLink to="/" className="header__logo-wrapper">L.</NavLink>
                 {/* DESCTOP MENU */}
                 <div className="header__main">
                     <NavLink exact to="/" activeClassName="header__item-active" className="header__item header__main-item">
