@@ -22,14 +22,12 @@
   "casting.untilTheEnd": "HASTA EL FINAL DE LA INSCRIPCIÓN",
 
   "casting.steps.title": " Para participar en el casting, debes seguir 3 pasos:",
-  "casting.steps.nums": {
-    "one": "Paso 1.",
-    "two": "Paso 2.",
-    "three": "Paso 3."
-  },
-  "casting.steps.text.one": " Paso 1. Graba un video respondiendo a nuestras preguntas y completa las tareas.",
-  "casting.steps.text.two": "Paso 2. Sube este video al menos a dos  plataformas sociales online, pueden ser cualquiera. Te aconsejamos que utilices las redes sociales y / o plataformas online donde  tengas más amigos.  - Por ejemplo, puedes utilizar las siguientes combinaciones: YouTube + Instagram, YouTube + Facebook, YouTube + TikTok, Vimeo + Instagram… o utilizar otras dos de algunas plataformas sociales. ",
-  "casting.steps.text.three": "Paso 3. Completa la solicitud adjuntando 2 enlaces a este video. Es importante que las cuentas estén abiertas y que los videos sean públicos. ¡Atención! No elimines estos videos hasta que se complete el casting.",
+  "casting.steps.nums.one": "Paso 1.",
+  "casting.steps.nums.two": "Paso 2.",
+  "casting.steps.nums.three": "Paso 3.",
+  "casting.steps.text.1": "Graba un video respondiendo a nuestras preguntas y completa las tareas.",
+  "casting.steps.text.2": "Sube este video al menos a dos  plataformas sociales online, pueden ser cualquiera. Te aconsejamos que utilices las redes sociales y / o plataformas online donde  tengas más amigos.  - Por ejemplo, puedes utilizar las siguientes combinaciones: YouTube + Instagram, YouTube + Facebook, YouTube + TikTok, Vimeo + Instagram… o utilizar otras dos de algunas plataformas sociales. ",
+  "casting.steps.text.3": "Completa la solicitud adjuntando 2 enlaces a este video. Es importante que las cuentas estén abiertas y que los videos sean públicos. ¡Atención! No elimines estos videos hasta que se complete el casting.",
   "casting.moreInfo.text": "MÁS INFORMACIÓN",
   "casting.moreInfo.videoReq.title": "Requisitos de vídeo:",
   "casting.moreInfo.videoReq.one": "1. El video no debe superar los 5 minutos de duración.",

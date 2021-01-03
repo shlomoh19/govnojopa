@@ -14,7 +14,7 @@ const LocaleMenu = ({ openLocaleMenu, setLocale }) => {
         <span onClick={() => setLocale('arabic')} className="locale-menu-item">عربي</span>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default LocaleMenu
+export default LocaleMenu;

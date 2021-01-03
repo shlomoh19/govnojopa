@@ -22,14 +22,12 @@
   "casting.untilTheEnd": "BIS ZUM ENDE DER REGISTRIERUNG",
 
   "casting.steps.title": "Um am Casting teilzunehmen, müssen Sie 3 Schritte ausführen:",
-  "casting.steps.nums": {
-    "one": "Schritt 1.",
-    "two": "Schritt 2.",
-    "three": "Schritt 3."
-  },
-  "casting.steps.text.one": "Nehmen Sie ein Video auf, in dem Sie unsere Fragen beantworten und die Aufgabe abschließen",
-  "casting.steps.text.two": " Laden Sie dieses Video auf mindestens zwei soziale Online-Plattformen hoch. Wir empfehlen Ihnen, die sozialen Netzwerke und / oder Online-Plattformen zu nutzen, auf denen Sie die mehr Freunde haben. Sie können beispielsweise die folgenden Kombinationen verwenden: YouTube + Instagram, YouTube + Facebook, YouTube + TikTok, Vimeo + Instagram… oder zwei andere soziale Plattformen.",
-  "casting.steps.text.three": "Füllen Sie eine Anwendung aus, indem Sie 2 Links zu diesem Video hinzufügen.  Es ist wichtig, dass Konten geöffnet und Videos öffentlich sind. Achtung!  Löschen Sie diese Videos erst, wenn das Casting abgeschlossen ist.",
+  "casting.steps.nums.one": "Schritt 1.",
+  "casting.steps.nums.two": "Schritt 2.",
+  "casting.steps.nums.three": "Schritt 3.",
+  "casting.steps.text.1": "Nehmen Sie ein Video auf, in dem Sie unsere Fragen beantworten und die Aufgabe abschließen",
+  "casting.steps.text.2": " Laden Sie dieses Video auf mindestens zwei soziale Online-Plattformen hoch. Wir empfehlen Ihnen, die sozialen Netzwerke und / oder Online-Plattformen zu nutzen, auf denen Sie die mehr Freunde haben. Sie können beispielsweise die folgenden Kombinationen verwenden: YouTube + Instagram, YouTube + Facebook, YouTube + TikTok, Vimeo + Instagram… oder zwei andere soziale Plattformen.",
+  "casting.steps.text.3": "Füllen Sie eine Anwendung aus, indem Sie 2 Links zu diesem Video hinzufügen.  Es ist wichtig, dass Konten geöffnet und Videos öffentlich sind. Achtung!  Löschen Sie diese Videos erst, wenn das Casting abgeschlossen ist.",
   "casting.moreInfo.videoReq.title": "Videoanforderungen:",
   "casting.moreInfo.videoReq.one": "1. Das Video sollte NICHT LÄNGER als 5 Minuten sein.",
   "casting.moreInfo.videoReq.two": "2. Das Video sollte die Beantwortung von Fragen und das Abschließen von Aufgaben enthalten.",

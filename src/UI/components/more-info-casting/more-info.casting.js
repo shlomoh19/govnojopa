@@ -33,9 +33,24 @@ const CastingInfo = () => {
             </p>
             <span className={"casting_steps-title"}>{t('casting.steps.title')}</span>
             <div className={"casting_steps-body"}>
-                <p><span className="casting_steps-num">Step 1. </span>{t('casting.steps.text.one')}</p>
-                <p><span className="casting_steps-num">Step 2. </span>{t('casting.steps.text.two')}</p>
-                <p><span className="casting_steps-num">Step 3. </span>{t('casting.steps.text.three')}</p>
+                <p>
+                    <span className="casting_steps-num">
+                        {t('casting.steps.nums.one') + ' '}
+                    </span>
+                    {t('casting.steps.text.1')}
+                </p>
+                <p>
+                    <span className="casting_steps-num">
+                        {t('casting.steps.nums.two') + ' '}
+                    </span>
+                    {t('casting.steps.text.2')}
+                </p>
+                <p>
+                    <span className="casting_steps-num">
+                        {t('casting.steps.nums.three') + ' '}
+                    </span>
+                    {t('casting.steps.text.3')}
+                </p>
             </div>
             <div className={isOpenMoreInfo
                 ? "casting_moreInfo casting_moreInfo-visible"

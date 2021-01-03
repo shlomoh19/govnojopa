@@ -4,10 +4,12 @@ import './PhoneInput.scss'
 
 const PhoneField = ({ changeHandler, placeholder }) => {
     const [phoneState, setPhoneState] = useState({
-        flagImg: require('./icons/us.png'),
+        flagImg: 'us',
         codeValue: 1,
         value: ''
     });
+
+    const validFlag = require(`./icons/${phoneState.flagImg}.png`)
 
     const validPhone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 
@@ -22,10 +24,10 @@ const PhoneField = ({ changeHandler, placeholder }) => {
 
 
     const countryFlagHandler = e => {
-        console.log(`./icons/${countrySelect.current.selectedOptions[0].dataset.countrycode.toLowerCase()}.png`)
+        console.log(countrySelect.current.selectedOptions[0].dataset.countrycode.toLowerCase())
         setPhoneState({
             ...phoneState,
-            flagImg: require(`./icons/${countrySelect.current.selectedOptions[0].dataset.countrycode.toLowerCase()}.png`),
+            flagImg: countrySelect.current.selectedOptions[0].dataset.countrycode.toLowerCase(),
             codeValue: e.target.value
         });
     }
@@ -35,7 +37,7 @@ const PhoneField = ({ changeHandler, placeholder }) => {
             <div className="container-tel">
                 <div className="tel-box">
                     <div className="select-box" onChange={countryFlagHandler}>
-                        <img src={phoneState.flagImg} className="after_select lazyload" id="img" />
+                        <img src={validFlag.default} className="after_select lazyload" id="img" />
                         <select
                             ref={countrySelect}
                             id="country"

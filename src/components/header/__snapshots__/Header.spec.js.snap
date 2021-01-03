@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header Render Header component 1`] = `ShallowWrapper {}`;
-
 exports[`Header renders correctly 1`] = `
 <Fragment>
   <header
