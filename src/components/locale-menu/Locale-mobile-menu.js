@@ -10,8 +10,8 @@ const LocaleMobileMenu = ({ openLocaleMenu, setLocale }) => {
       <span onClick={() => setLocale('es')} className="locale-mobile-menu-item">Español</span>
       <span onClick={() => setLocale('ru')} className="locale-mobile-menu-item">Русский</span>
       <span onClick={() => setLocale('arabic')} className="locale-mobile-menu-item">عربي</span>
-      <span onClick={() => setLocale('pt')} className="locale-menu-item">Português</span>
-      <span onClick={() => setLocale('it')} className="locale-menu-item">Italiano</span>
+      <span onClick={() => setLocale('pt')} className="locale-mobile-menu-item">Português</span>
+      <span onClick={() => setLocale('it')} className="locale-mobile-menu-item">Italiano</span>
     </div>
   )
 }

@@ -64,7 +64,7 @@ function Follow({ setDone }) {
   return (
     <>
       <h2 className="follow__title">
-        <span className="befree-title-blue">{t('follow.title.blue')} {' '}</span>{t('follow.title')}
+        <span className="befree-title-blue">{t('follow.title.blue')}&nbsp;</span>{t('follow.title')}
       </h2>
       <form className="follow" onSubmit={sendForm}>
         <div className="error_wrapper">
