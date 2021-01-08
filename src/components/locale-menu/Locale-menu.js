@@ -12,6 +12,8 @@ const LocaleMenu = ({ openLocaleMenu, setLocale }) => {
         <span onClick={() => setLocale('es')} className="locale-menu-item">Español</span>
         <span onClick={() => setLocale('ru')} className="locale-menu-item">Русский</span>
         <span onClick={() => setLocale('arabic')} className="locale-menu-item">عربي</span>
+        <span onClick={() => setLocale('pt')} className="locale-menu-item">Português</span>
+        <span onClick={() => setLocale('it')} className="locale-menu-item">Italiano</span>
       </div>
     </>
   );

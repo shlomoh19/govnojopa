@@ -14,10 +14,12 @@
   @media (max-width: 700px) {
     width: 70%;
   }
+}
 
-  .follow__title {
-    margin-bottom: 0;
-    margin-top: 50px;
-    font-weight: 400;
-  }
+.follow__title {
+  margin-bottom: 0;
+  margin-top: 50px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
 }

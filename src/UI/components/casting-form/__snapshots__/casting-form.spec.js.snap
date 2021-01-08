@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CastingForm renders correctly 1`] = `
+<Fragment>
+  <div
+    className="error_wrapper"
+  >
+    <p
+      className="input_error error_visible"
+    />
+    <p
+      className="input_error error_visible"
+    />
+    <p
+      className="input_error error_visible"
+    />
+    <p
+      className="input_error error_visible"
+    />
+    <p
+      className="input_error error_visible"
+    />
+    <p
+      className="input_error error_visible"
+    />
+    <p
+      className="input_error error_visible"
+    />
+  </div>
+  <div
+    className="casting_form-wrapper"
+  >
+    <div
+      className="overlay"
+      onClick={[Function]}
+    />
+    <div />
+    <div
+      className="befree-col casting__c-1"
+    >
+      <Input
+        changeHandler={[Function]}
+        error={null}
+        name="name"
+        placeholder="name"
+        value=""
+      />
+      <Input
+        changeHandler={[Function]}
+        error={null}
+        name="surname"
+        placeholder="surname"
+        value=""
+      />
+      <Input
+        changeHandler={[Function]}
+        error={null}
+        name="email"
+        placeholder="email"
+        value=""
+      />
+      <PhoneField
+        changeHandler={[Function]}
+        phoneValue=""
+        placeholder="phone"
+      />
+    </div>
+    <div
+      className="befree-col casting__c-2"
+    >
+      <LongInput
+        changeHandler={[Function]}
+        error={null}
+        name="video1"
+        placeholder="link.video"
+        value=""
+      />
+      <LongInput
+        changeHandler={[Function]}
+        error={null}
+        name="video2"
+        placeholder="link.video"
+        value=""
+      />
+      <div
+        className="field_wrapper"
+      >
+        <label
+          className="field_placeholder visible"
+          htmlFor="input_"
+        >
+          transmittalLater
+        </label>
+        <textarea
+          className="long-input-casting"
+          name="about"
+          onChange={[Function]}
+          type="text"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "marginBottom": "14px",
+        "marginTop": "20px",
+        "width": "70%",
+      }
+    }
+  >
+    casting.page.end
+  </div>
+  <div
+    className="casting_terms"
+  >
+    <input
+      className="custom-checkbox"
+      id="accept"
+      type="checkbox"
+    />
+    <label
+      htmlFor="accept"
+      onClick={[Function]}
+    >
+       
+      casting.checkbox
+       
+    </label>
+    <p
+      className="casting_terms-modal-button"
+      onClick={[Function]}
+    >
+      Terms of agreement
+    </p>
+  </div>
+  <Button
+    disabled={true}
+    onClick={[Function]}
+    title="send"
+  />
+</Fragment>
+`;

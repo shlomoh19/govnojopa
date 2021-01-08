@@ -46,7 +46,7 @@ function Follow({ setDone }) {
           email: ['Email is not valid!']
         })
       }
-      
+
     } catch (err) {
       const resErrors = err.response?.data.errors
       setErrors({ ...errors, ...resErrors })
@@ -62,36 +62,38 @@ function Follow({ setDone }) {
     })
 
   return (
-    <form className="follow" onSubmit={sendForm}>
+    <>
       <h2 className="follow__title">
         <span className="befree-title-blue">{t('follow.title.blue')} {' '}</span>{t('follow.title')}
       </h2>
-      <div className="error_wrapper">
-        {Object.values(errors).map(err => {
-          if (err.length > 0) {
-            return <p className="input_error error_visible">{err}</p>
-          }
-        })}
-      </div>
+      <form className="follow" onSubmit={sendForm}>
+        <div className="error_wrapper">
+          {Object.values(errors).map(err => {
+            if (err.length > 0) {
+              return <p className="input_error error_visible">{err}</p>
+            }
+          })}
+        </div>
 
-      <Input
-        error={!!errors.name[0].length && !!errors.name[0] ? errors.name[0] : null}
-        changeHandler={formChange}
-        name="name"
-        placeholder={t('name')}
-        value={form.name}
-      />
-      <Input
-        error={!!errors.email[0].length && !!errors.email[0] ? errors.email[0] : null}
-        changeHandler={formChange}
-        name="email"
-        placeholder={t('email')}
-        value={form.email}
-      />
-      <div style={{width: '100%', marginTop: '-25px'}}>
-        {loading ? <Spinner /> : <Button onClick={sendForm} disabled={!canSend} title={t('send')} />}
-      </div>
-    </form>
+        <Input
+          error={!!errors.name[0].length && !!errors.name[0] ? errors.name[0] : null}
+          changeHandler={formChange}
+          name="name"
+          placeholder={t('name')}
+          value={form.name}
+        />
+        <Input
+          error={!!errors.email[0].length && !!errors.email[0] ? errors.email[0] : null}
+          changeHandler={formChange}
+          name="email"
+          placeholder={t('email')}
+          value={form.email}
+        />
+        <div style={{ width: '100%', marginTop: '-25px' }}>
+          {loading ? <Spinner /> : <Button onClick={sendForm} disabled={!canSend} title={t('send')} />}
+        </div>
+      </form>
+    </>
   )
 }
 

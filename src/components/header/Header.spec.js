@@ -4,8 +4,8 @@ import toJson from 'enzyme-to-json'
 import Header from './Header'
 
 const props = {
-    mobileMenuHandler: () => undefined, 
-    mobileMenu: false, 
+    mobileMenuHandler: () => undefined,
+    mobileMenu: false,
     children: '<div>Hello, world!</div>'
 }
 
@@ -22,4 +22,4 @@ describe('Header', () => {
         const wrapper = component.find(".header");
         expect(wrapper).toHaveLength(1);
     });
-})
+});

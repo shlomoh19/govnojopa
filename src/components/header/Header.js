@@ -6,7 +6,7 @@ import { setCookiesLocale } from "../../utils/cookies";
 import './Header.scss'
 
 const Header = ({ mobileMenuHandler, mobileMenu, children }) => {
-    const [openLocaleMenu, setOpenLocaleMenu] = useState(false)
+    const [openLocaleMenu, setOpenLocaleMenu] = useState(false);
 
     const { t, i18n } = useTranslation()
 
