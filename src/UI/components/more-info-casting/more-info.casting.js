@@ -1,16 +1,28 @@
-import React, { useState } from 'react'
-import { useTranslation } from "react-i18next";
+import React, {useState} from 'react'
+import {useTranslation} from "react-i18next";
 import './more-info-casting.scss'
 import '../../../components/be-free/components/casting/Casting.scss'
 import '../../../components/be-free/Be-free.scss'
 import ArrowDownIcon from '../../icons/ArrowDownIcon';
+import Button from "../button/Button";
+import Modal from "../casting-form/Modal";
+import VideoJs from "../../../components/home/video/VideoJs";
+import {NavLink} from "react-router-dom";
 
 
 const CastingInfo = () => {
     const [isOpenMoreInfo, setIsOpenMoreInfo] = useState(false);
-    const { t } = useTranslation()
+    const [modalVideoInstuctionIsOpen, setModalVideoInstuctionIsOpen] = useState(false)
+    const [exampleVideoIsOpen, setExampleVideoIsOpen] = useState(false)
+
+    const {t} = useTranslation()
 
     const toggleMoreInfo = () => setIsOpenMoreInfo(!isOpenMoreInfo)
+
+    const toggleVideoInstructionModal = () =>
+        setModalVideoInstuctionIsOpen(!modalVideoInstuctionIsOpen)
+    const toggleExampleVideoModal = () =>
+        setExampleVideoIsOpen(!exampleVideoIsOpen)
 
     return (
         <div className="befree-container">
@@ -56,6 +68,16 @@ const CastingInfo = () => {
                 ? "casting_moreInfo casting_moreInfo-visible"
                 : "casting_moreInfo"}
             >
+                <Button title="Посмотреть видео инструкцию" onClick={toggleVideoInstructionModal}/>
+                <Modal
+                    closeModal={toggleVideoInstructionModal}
+                    show={modalVideoInstuctionIsOpen}
+                    title={"Instruction"}
+                >
+                    <VideoJs
+                        videoURL="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+                    />
+                </Modal>
                 <div className={"casting_moreInfo_item"}>
                     <p className={"casting_moreInfo_title"}> {t('casting.moreInfo.videoReq.title')} </p>
                     <p> {t('casting.moreInfo.videoReq.one')} </p>
@@ -63,6 +85,19 @@ const CastingInfo = () => {
                     <p> {t('casting.moreInfo.videoReq.three')} </p>
                     <p> {t('casting.moreInfo.videoReq.four')} </p>
                 </div>
+                <Button
+                    title="Посмотреть пример видео кастинга"
+                    onClick={toggleExampleVideoModal}
+                />
+                <Modal
+                    closeModal={toggleExampleVideoModal}
+                    show={exampleVideoIsOpen}
+                    title={"Example"}
+                >
+                    <VideoJs
+                        videoURL="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+                    />
+                </Modal>
 
                 <div className={"casting_moreInfo_item"}>
                     <p className={"casting_moreInfo_title"}> {t('casting.moreInfo.videoContent.title')} </p>
@@ -89,14 +124,19 @@ const CastingInfo = () => {
                     <p> {t('casting.moreInfo.soccer.four')} </p>
                     {/* <p> {t('casting.moreInfo.soccer.five')} </p> */}
                 </div>
+
+                <NavLink to="/faq">
+                    <Button title="Часто задаваемые вопросы" />
+                </NavLink>
             </div>
+
             <p className={"casting_more-info"} onClick={toggleMoreInfo}>
                 <span> {isOpenMoreInfo ? 'HIDE' : t('casting.moreInfo.text')} </span>
                 <ArrowDownIcon
                     style={isOpenMoreInfo
-                        ? { marginLeft: '10px', transform: 'rotate(180deg)' }
-                        : { marginLeft: '10px' }
-                    } />
+                        ? {marginLeft: '10px', transform: 'rotate(180deg)'}
+                        : {marginLeft: '10px'}
+                    }/>
             </p>
         </div>
     )

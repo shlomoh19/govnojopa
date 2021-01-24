@@ -35,6 +35,9 @@ const Header = ({ mobileMenuHandler, mobileMenu, children }) => {
                     <NavLink to="/contacts" activeClassName="header__item-active" className="header__item header__main-item">
                         {t('contacts')}
                     </NavLink>
+                    <NavLink exact to="/faq" activeClassName="header__item-active" className="header__item header__main-item">
+                        FAQ
+                    </NavLink>
                 </div>
                 <div className="locale__wrapper" onClick={toggleLocaleMenu}>
                     <div className="locale__label">

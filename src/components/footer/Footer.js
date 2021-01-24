@@ -6,6 +6,7 @@ import './Footer.scss'
 const Footer = () => {
     const {t} = useTranslation()
     return (
+        <>
         <div className="footer">
             <div className="footer__content">
                 <div className="footer-item">
@@ -27,8 +28,12 @@ const Footer = () => {
                     </p>
                     <div className="logo">L.</div>
                 </div>
+                </div>
             </div>
-        </div>
+            <div className="footer-description">
+                <span className="footer-blue">© 2021 L. </span> BE FREE LTD 13125991
+            </div>
+        </>
     )
 }
 

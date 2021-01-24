@@ -10,6 +10,7 @@ import CookiePopup from './components/cookie-popup/cookie-popup';
 import { getCookiesByName, setAgreeWithCookies } from './utils/cookies';
 
 import './App.scss';
+import FaqPage from "./components/faq/faq-page";
 
 
 const BefreeLazy = lazy(() => import('./components/be-free/Be-free'))
@@ -59,6 +60,7 @@ function App() {
                     <div className="content-wrapper">
                         <div onClick={mobileMenuHandler} style={mobileMenu ? menuActive : menuUnActive} className="Open-menu-content" />
                         <Route exact path="/" component={Home} />
+                        <Route path="/faq" component={FaqPage} />
 
                         <Route path="/befree/:id" render={() => {
                             return (

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink, Route } from 'react-router-dom'
+import { NavLink, Route, useParams } from 'react-router-dom'
 import Follow from './components/follow/Follow'
 import Casting from './components/casting/Casting'
 import Donate from "./components/donate/Donate";
@@ -13,6 +13,8 @@ import './Be-free.scss'
 
 function BeFree({ done, setDone }) {
   const [borderActiveMarginLeft, setBorderActiveMarginLeft] = useState(0)
+
+  const param = useParams()
 
   const CastingPoster = 'https://lbefree.com/storage/casting/castingImage.jpg'
 

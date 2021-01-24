@@ -3,7 +3,7 @@ import ReactHlsPlayer from 'react-hls-player'
 
 import './VideoHLS.scss';
 
-const VideoHLS = ({ videoURL, image, title, className }) => {
+const VideoHLS = ({ videoURL, image, title }) => {
     return (
         // <div className="video-wrapper">
             <ReactHlsPlayer

@@ -1,5 +1,5 @@
 {
-  "locale": "PORTUGUÊS",
+  "locale": "Português",
   "team": "TIME",
   "team.title.text": "Estamos fazendo mais do que apenas um projecto social. Estamos criando o futuro.",
   "team.subtitle.text": 
@@ -26,8 +26,7 @@
   "casting.steps.nums.two": "Passo 2.",
   "casting.steps.nums.three": "Passo 3.",
   "casting.steps.text.1": "Grave um vídeo respondendo às nossas perguntas e complete a tarefa.",
-  "casting.steps.text.2": "Publique este vídeo em pelo menos 2 de qualquer plataforma social online. Aconselhamos você a usar as redes sociais e / ou plataformas online onde tenha mais amigos.Por exemplo, você pode usar as seguintes combinações: YouTube + Instagram, YouTube + Facebook, YouTube + TikTok, Vimeo + Instagram…ou usar outras duas plataformas sociais.
-",
+  "casting.steps.text.2": "Publique este vídeo em pelo menos 2 de qualquer plataforma social online. Aconselhamos você a usar as redes sociais e / ou plataformas online onde tenha mais amigos.Por exemplo, você pode usar as seguintes combinações: YouTube + Instagram, YouTube + Facebook, YouTube + TikTok, Vimeo + Instagram…ou usar outras duas plataformas sociais.",
   "casting.steps.text.3": "Preencha uma aplicação anexando 2 links a este vídeo. É importante que as contas sejam abertas e os vídeos sejam públicos. Atenção! Não apague esses vídeos até que a seleção esteja completa.",
   "casting.moreInfo.text": "More information",
   "casting.moreInfo.videoReq.title": " Requisitos do vídeo:",

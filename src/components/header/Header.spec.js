@@ -4,7 +4,7 @@ import toJson from 'enzyme-to-json'
 import Header from './Header'
 
 const props = {
-    mobileMenuHandler: () => undefined,
+    mobileMenuHandler: jest.fn(),
     mobileMenu: false,
     children: '<div>Hello, world!</div>'
 }

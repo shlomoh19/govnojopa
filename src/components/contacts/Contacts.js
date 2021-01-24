@@ -103,6 +103,7 @@ const Contacts = ({ done, setDone }) => {
         : (
           <div className="contacts-container">
             <h2 className="contacts-title"> {t('contacts')} </h2>
+            <p>Kemp House, 160 City Road, United Kingdom, London, EC1V 2NX</p>
             <p className="contacts_email">GOAL@LBEFREE.COM</p>
             <div className="contacts__icon-wrapper">
               <FacebookIcon href="https://www.facebook.com/lbefree/" />

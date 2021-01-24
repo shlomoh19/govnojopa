@@ -2,22 +2,26 @@
 
 .terms_wrapper {
     position: fixed;
-    max-width: 700px;
-    width: 100%;
+    max-width: 1600px;
+    width: 90%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) translateY(0px);
     background-color: white;
-    z-index: 999;
+    z-index: -100;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    opacity: 1;
+    opacity: 0;
     transition: all .2s ease-in;
     padding: 10px;
-    animation: mountTermsModal ease-in .2s;
+    @media (max-width: 1440px) {
+        max-width: 1000px;
+    }
 }
 
 .terms_wrapper-open {
     opacity: 1;
+    z-index: 100;
+    animation: mountTermsModal ease-in .2s;
 }
 
 .terms_content {
@@ -83,8 +87,14 @@
         transition: transform ease-in .2s;
         background-color: $blue;
         color: white;
+        width: 200px;
+        height: 50px;
         &:hover {
             transform: scale(1.1);
+        }
+        @media (max-width: 1440px) {
+            width: 100px;
+            height: 40px;
         }
     }
 }
@@ -117,4 +127,21 @@
     .terms_text {
         font-size: 16px;
     }
+}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1;
+    transition: all .3s;
+}
+.overlay-active {
+    opacity: 1;
+    background-color: rgba($color: $black, $alpha: 0.3);
+    z-index: 10;
+    transition: all ease-in .3s;
 }

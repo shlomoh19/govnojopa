@@ -1,7 +1,7 @@
 import React from 'react'
 import './Button.scss'
 
-const Button = ({ title, onClick, disabled = false }) => {
+const Button = ({ title, onClick = () => {}, disabled = false }) => {
     return (
         <div className="field_wrapper">
             <button
