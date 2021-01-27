@@ -64,20 +64,11 @@ const CastingInfo = () => {
                     {t('casting.steps.text.3')}
                 </p>
             </div>
+
             <div className={isOpenMoreInfo
                 ? "casting_moreInfo casting_moreInfo-visible"
                 : "casting_moreInfo"}
             >
-                <Button title="Посмотреть видео инструкцию" onClick={toggleVideoInstructionModal}/>
-                <Modal
-                    closeModal={toggleVideoInstructionModal}
-                    show={modalVideoInstuctionIsOpen}
-                    title={"Instruction"}
-                >
-                    <VideoJs
-                        videoURL="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
-                    />
-                </Modal>
                 <div className={"casting_moreInfo_item"}>
                     <p className={"casting_moreInfo_title"}> {t('casting.moreInfo.videoReq.title')} </p>
                     <p> {t('casting.moreInfo.videoReq.one')} </p>
@@ -85,14 +76,12 @@ const CastingInfo = () => {
                     <p> {t('casting.moreInfo.videoReq.three')} </p>
                     <p> {t('casting.moreInfo.videoReq.four')} </p>
                 </div>
-                <Button
-                    title="Посмотреть пример видео кастинга"
-                    onClick={toggleExampleVideoModal}
-                />
+
+                <Button title="Посмотреть видео инструкцию" onClick={toggleVideoInstructionModal}/>
                 <Modal
-                    closeModal={toggleExampleVideoModal}
-                    show={exampleVideoIsOpen}
-                    title={"Example"}
+                    closeModal={toggleVideoInstructionModal}
+                    show={modalVideoInstuctionIsOpen}
+                    title={"Instruction"}
                 >
                     <VideoJs
                         videoURL="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
@@ -108,21 +97,42 @@ const CastingInfo = () => {
                     <p> {t('casting.moreInfo.videoContent.five')} </p>
                 </div>
 
-                <div className={"casting_moreInfo_item"}>
-                    <p className={"casting_moreInfo_title"}> {t('casting.moreInfo.goalkeeper.title')} </p>
-                    <p> {t('casting.moreInfo.goalkeeper.one')} </p>
-                    <p> {t('casting.moreInfo.goalkeeper.two')} </p>
-                    <p> {t('casting.moreInfo.goalkeeper.three')} </p>
-                    <p> {t('casting.moreInfo.goalkeeper.four')} </p>
-                </div>
+                <Button
+                    title="Посмотреть пример видео кастинга"
+                    onClick={toggleExampleVideoModal}
+                />
+                <Modal
+                    closeModal={toggleExampleVideoModal}
+                    show={exampleVideoIsOpen}
+                    title={"Example"}
+                >
+                    <VideoJs
+                        videoURL="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+                    />
+                </Modal>
 
                 <div className={"casting_moreInfo_item"}>
-                    <p className={"casting_moreInfo_title"}> {t('casting.moreInfo.soccer.title')} </p>
-                    <p> {t('casting.moreInfo.soccer.one')} </p>
-                    <p> {t('casting.moreInfo.soccer.two')} </p>
-                    <p> {t('casting.moreInfo.soccer.three')} </p>
-                    <p> {t('casting.moreInfo.soccer.four')} </p>
-                    {/* <p> {t('casting.moreInfo.soccer.five')} </p> */}
+                    <p className={"casting_moreInfo_title"}> {t("casting.moreInfo.conditions.title")} </p>
+                    <ul>
+                        <li>{t('casting.moreInfo.conditions.1')}</li>
+                        <li>{t('casting.moreInfo.conditions.2')}</li>
+                        <li>{t('casting.moreInfo.conditions.3')}</li>
+                        <li>{t('casting.moreInfo.conditions.4')}</li>
+                        <li>{t('casting.moreInfo.conditions.5')}</li>
+                        <li>{t('casting.moreInfo.conditions.6')}</li>
+                        <li>{t('casting.moreInfo.conditions.7')}</li>
+                        <li>{t('casting.moreInfo.conditions.8')}</li>
+                        <li>{t('casting.moreInfo.conditions.9')}</li>
+                        <li>{t('casting.moreInfo.conditions.10')}</li>
+                        <li>{t('casting.moreInfo.conditions.11')}</li>
+                        <li>{t('casting.moreInfo.conditions.12')}</li>
+                        <li>{t('casting.moreInfo.conditions.13')}</li>
+                        <li>{t('casting.moreInfo.conditions.14')}</li>
+                        <li>{t('casting.moreInfo.conditions.15')}</li>
+                        <li>{t('casting.moreInfo.conditions.16')}</li>
+                        <li>{t('casting.moreInfo.conditions.17')}</li>
+                        <li>{t('casting.moreInfo.conditions.18')}</li>
+                    </ul>
                 </div>
 
                 <NavLink to="/faq">

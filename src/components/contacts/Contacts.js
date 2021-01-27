@@ -103,7 +103,10 @@ const Contacts = ({ done, setDone }) => {
         : (
           <div className="contacts-container">
             <h2 className="contacts-title"> {t('contacts')} </h2>
-            <p>Kemp House, 160 City Road, United Kingdom, London, EC1V 2NX</p>
+            <p>Kemp House, 160 City Road, </p>
+            <p>EC1V 2NX,</p>
+            <p>London,</p>
+            <p>United Kingdom.</p>
             <p className="contacts_email">GOAL@LBEFREE.COM</p>
             <div className="contacts__icon-wrapper">
               <FacebookIcon href="https://www.facebook.com/lbefree/" />
@@ -124,7 +127,7 @@ const Contacts = ({ done, setDone }) => {
               {t('contacts.text')}
               {Object.values(errors).map(err => {
                 if (err.length > 0) {
-                  return <p style={{ color: '#C52E3B' }} className="input_error error_visible">{err}</p>
+                  return <p style={{ color: '#c52e3b' }} className="input_error error_visible">{err}</p>
                 }
               })}
             </p>

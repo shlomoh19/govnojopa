@@ -14,11 +14,16 @@
   font-weight: 400;
 }
 
+.contacts_email {
+  font-weight: 300;
+  color: $blue;
+  margin-top: 50px;
+}
+
 .contacts__icon-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
 
   a {
     margin-right: 7px;

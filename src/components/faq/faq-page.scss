@@ -1,0 +1,13 @@
+@import "../../UI/style.scss";
+
+.faq__title {
+  text-align: center;
+  font-weight: 400;
+  color: $blue;
+  margin-bottom: 50px;
+}
+
+.faq__question {
+  color: $blue;
+  font-weight: 400;
+}

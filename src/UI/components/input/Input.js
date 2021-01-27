@@ -26,7 +26,9 @@ const Input = ({ changeHandler, name, placeholder, error, value }) => {
           ? "field_placeholder visible"
           : "field_placeholder"
       }
-      >{placeholder}</label>
+      >
+          {placeholder}
+      </label>
       <input
         id={`input_${name}`}
         onChange={changeHandler}
@@ -37,6 +39,7 @@ const Input = ({ changeHandler, name, placeholder, error, value }) => {
         autoComplete="off"
         maxLength={maxLengthProperty(name)}
       />
+        <i className="far fa-question-circle tooltip" data-tooltip="Петуху петушиная жизнь"/>
     </div>
   )
 }

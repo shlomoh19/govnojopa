@@ -4,6 +4,9 @@
     position: relative;
     width: 100%;
     text-align: center;
+    @media (max-width: 800px) {
+        width: 80%;
+    }
 
     .input_error {
         position: absolute;

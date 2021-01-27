@@ -25,6 +25,9 @@ const MobileMenu = ({ mobileMenu, mobileMenuHandler }) => {
             <NavLink onClick={mobileMenuHandler} to="/casting" activeClassName="mobile__menu-item" className="mobile__menu-item">
                 {t('casting')}
             </NavLink>
+            <NavLink onClick={mobileMenuHandler} to="/faq" activeClassName="mobile__menu-item" className="mobile__menu-item">
+                FAQ
+            </NavLink>
             <NavLink onClick={mobileMenuHandler} to="/contacts" activeClassName="mobile__menu-item" className="mobile__menu-item">
                 {t('contacts')}
             </NavLink>

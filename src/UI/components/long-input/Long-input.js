@@ -18,6 +18,7 @@ const LongInput = ({ changeHandler, name, placeholder, error, value }) => {
         type="text"
         value={value}
       />
+        <i className="far fa-question-circle tooltip" data-tooltip="Петуху петушиная жизнь"/>
     </div>
   )
 }
