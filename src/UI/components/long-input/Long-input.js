@@ -1,7 +1,7 @@
 import React from 'react'
 import './Long-input.scss'
 
-const LongInput = ({ changeHandler, name, placeholder, error, value }) => {
+const LongInput = ({ changeHandler, name, placeholder, error, value, tooltip }) => {
   return (
     <div className="field_wrapper">
       <label htmlFor={`input_${name}`} className={
@@ -18,7 +18,7 @@ const LongInput = ({ changeHandler, name, placeholder, error, value }) => {
         type="text"
         value={value}
       />
-        <i className="far fa-question-circle tooltip" data-tooltip="Петуху петушиная жизнь"/>
+        <i className="far fa-question-circle tooltip" data-tooltip={tooltip}/>
     </div>
   )
 }

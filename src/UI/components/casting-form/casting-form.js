@@ -63,7 +63,6 @@ const CastingForm = ({setDone}) => {
 
     const onToggleTermsModal = () => setTermsModalIsOpen(!termsModalIsOpen)
 
-
     const sendForm = async () => {
         clearError()
         try {
@@ -126,21 +125,21 @@ const CastingForm = ({setDone}) => {
                     onToggleTermsModal={onToggleTermsModal}
                 />
                 <div className="befree-col casting__c-1">
-                    <Input value={form.name} error={!!errors.name[0].length && !!errors.name[0] ? errors.name[0] : null}
+                    <Input tooltip={t('casting.tooltip.name')} value={form.name} error={!!errors.name[0].length && !!errors.name[0] ? errors.name[0] : null}
                            name="name" placeholder={t('name')} changeHandler={changeHandler}/>
-                    <Input value={form.surname}
+                    <Input tooltip={t('casting.tooltip.surname')} value={form.surname}
                            error={!!errors.surname[0].length && !!errors.surname[0] ? errors.surname[0] : null}
                            name="surname" placeholder={t('surname')} changeHandler={changeHandler}/>
-                    <Input value={form.email}
+                    <Input tooltip={t('casting.tooltip.email')} value={form.email}
                            error={!!errors.email[0].length && !!errors.email[0] ? errors.email[0] : null} name="email"
                            placeholder={t('email')} changeHandler={changeHandler}/>
                     <PhoneField placeholder={t('phone')} changeHandler={phoneChange} phoneValue={form.phone}/>
                 </div>
                 <div className="befree-col casting__c-2">
-                    <LongInput value={form.video1}
+                    <LongInput tooltip={t('casting.tooltip.link.1')} value={form.video1}
                                error={!!errors.video1[0].length && !!errors.video1[0] ? errors.video1[0] : null}
                                name="video1" placeholder={t('link.video')} changeHandler={changeHandler}/>
-                    <LongInput value={form.video2}
+                    <LongInput tooltip={t('casting.tooltip.link.2')} value={form.video2}
                                error={!!errors.video2[0].length && !!errors.video2[0] ? errors.video2[0] : null}
                                name="video2" placeholder={t('link.video')} changeHandler={changeHandler}/>
                     <div className="field_wrapper">
@@ -168,7 +167,6 @@ const CastingForm = ({setDone}) => {
                 <label onClick={toggleIsAgree} htmlFor="accept"> {t('casting.checkbox')} </label>
                 <p onClick={onToggleTermsModal} className="casting_terms-modal-button">Terms of agreement</p>
             </div>
-
 
             {loading ? <Spinner/> : <Button onClick={sendForm} disabled={!canSend} title={t('send')}/>}
         </>

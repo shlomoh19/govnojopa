@@ -1,7 +1,7 @@
 import React from 'react'
 import './Input.scss'
 
-const Input = ({ changeHandler, name, placeholder, error, value }) => {
+const Input = ({ changeHandler, name, placeholder, error, value, tooltip }) => {
 
   const maxLengthProperty = propName => {
     switch (propName) {
@@ -39,7 +39,7 @@ const Input = ({ changeHandler, name, placeholder, error, value }) => {
         autoComplete="off"
         maxLength={maxLengthProperty(name)}
       />
-        <i className="far fa-question-circle tooltip" data-tooltip="Петуху петушиная жизнь"/>
+        {tooltip && <i className="far fa-question-circle tooltip" data-tooltip={tooltip}/>}
     </div>
   )
 }
