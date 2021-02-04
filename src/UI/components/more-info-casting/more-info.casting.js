@@ -8,6 +8,10 @@ import Button from "../button/Button";
 import Modal from "../casting-form/Modal";
 import VideoJs from "../../../components/home/video/VideoJs";
 import {NavLink} from "react-router-dom";
+import InstructionVideo from '../../../files/InstructionVideo.mov';
+import ExampleVideo from '../../../files/ExampleVideo.mov'
+import InstructionVideoCover from '../../../files/InstructionVideoCover.jpg';
+import ExampleVideoCover from '../../../files/ExampleVideoCover.jpg'
 
 
 const CastingInfo = () => {
@@ -84,7 +88,8 @@ const CastingInfo = () => {
                     title={"Instruction"}
                 >
                     <VideoJs
-                        videoURL="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+                        videoURL={InstructionVideo}
+                        image={InstructionVideoCover}
                     />
                 </Modal>
 
@@ -107,7 +112,8 @@ const CastingInfo = () => {
                     title={"Example"}
                 >
                     <VideoJs
-                        videoURL="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+                        videoURL={ExampleVideo}
+                        image={ExampleVideoCover}
                     />
                 </Modal>
 

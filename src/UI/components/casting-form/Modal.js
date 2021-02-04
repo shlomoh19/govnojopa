@@ -1,7 +1,8 @@
-import React, {useEffect, useRef} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import './Modal.scss'
 
 const Modal = ({show, closeModal, title, children}) => {
+    const [unmount, setUnmount] = useState(false)
 
     useEffect(() => {
         if (show) {
@@ -11,6 +12,7 @@ const Modal = ({show, closeModal, title, children}) => {
                     closeModal()
                 }
             })
+            setUnmount(false)
         }
         if (!show) {
             document.body.style.overflow = 'auto'
@@ -19,6 +21,9 @@ const Modal = ({show, closeModal, title, children}) => {
                     closeModal()
                 }
             })
+            setTimeout(() => {
+                setUnmount(true)
+            }, 300)
         }
     }, [show])
 
@@ -39,7 +44,7 @@ const Modal = ({show, closeModal, title, children}) => {
                     <span className="terms_wrapper-title-name">{title}</span>
                     <i onClick={closeModal} className="fas fa-times x-icon"/>
                 </div>
-                {children}
+                {!unmount && children}
                 <div className="terms_footer">
                     <button className="terms_button" type="button" onClick={closeModal}>Close</button>
                 </div>
