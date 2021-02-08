@@ -24,7 +24,7 @@ const CastingPage = ({ done, setDone }) => {
 
     useEffect(() => {
         smoothJumpUp()
-        const now = moment(new Date());
+        const now = moment();
         const end = moment("2021-04-20");
         const durationDaysToEnd = moment.duration(end.diff(now));
         const daysToEnd = durationDaysToEnd.asDays();
@@ -48,8 +48,8 @@ const CastingPage = ({ done, setDone }) => {
                         image={CastingPoster}
                     />
                     <div style={{ textAlign: 'center' }}>
-                        <p className="registered_count"> {alreadyRegistered} </p>
-                        <span className="registered_title"> {t('casting.already.registred')} </span>
+                        {/*<p className="registered_count"> {alreadyRegistered} </p>*/}
+                        {/*<span className="registered_title"> {t('casting.already.registred')} </span>*/}
                         <CircularProgressbar days={daysToEnd} hours={hoursToEnd} />
                     </div>
                     <div className="befree-container">
