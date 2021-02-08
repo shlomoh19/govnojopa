@@ -19,6 +19,10 @@
   "casting.already.registred": "JÁ REGISTRADO",
   "casting.untilTheEnd": "ATÉ AO FINAL DO REGISTRO",
 
+  "casting.title.text.1": "L. BE FREE is an international social project that will make football more accessible. L. BE FREE est un projet social international qui rend le football plus accessible pour tous",
+  "casting.title.text.2": "We are building a new system in which the doors to professional football will be open for all talented guys. Nous construisons un nouveau système, où les portes du football professionnel seront ouvertes à tous les gens talentueux.",
+
+
   "casting.steps.title": " Para participar da seleção, você deve completar 3 etapas:",
   "casting.steps.nums.one": "Passo 1.",
   "casting.steps.nums.two": "Passo 2.",
@@ -59,6 +63,9 @@
   "casting.moreInfo.conditions.18": "Assistance in employment and further support if for any reason you drop out from the world team",
   "casting.page.end": "* Projecto social internacional. Todas as fases de participação na seleção são absolutamente gratuitas. Ao completar esta inscrição, você concorda em usarmos, editarmos e transferirmos seus dados.",
   "casting.checkbox": "Aceito os Termos",
+  "casting.moreInfo.showVideoInstruction": "ПОСМОТРЕТЬ ВИДЕО ИНСТРУКЦИЮ",
+  "casting.moreInfo.showExampleVideo": "ПОСМОТРЕТЬ ПРИМЕР ВИДЕО ДЛЯ КАСТИНГА",
+  "casting.moreInfo.faq": "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ",
 
   "casting.tooltip.name": "Write your Name using Latin alphabet (A, b, c, d...)",
   "casting.tooltip.surname": "Write your Surname using Latin alphabet (A, b, c, d...)",
