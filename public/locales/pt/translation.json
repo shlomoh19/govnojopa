@@ -19,8 +19,8 @@
   "casting.already.registred": "JÁ REGISTRADO",
   "casting.untilTheEnd": "ATÉ AO FINAL DO REGISTRO",
 
-  "casting.title.text.1": "L. BE FREE is an international social project that will make football more accessible. L. BE FREE est un projet social international qui rend le football plus accessible pour tous",
-  "casting.title.text.2": "We are building a new system in which the doors to professional football will be open for all talented guys. Nous construisons un nouveau système, où les portes du football professionnel seront ouvertes à tous les gens talentueux.",
+  "casting.title.text.1": "L. BE FREE é um projeto social internacional que torna o futebol mais acessível.",
+  "casting.title.text.2": "Estamos construindo um novo sistema que abre as portas do futebol profissional para todos os homens talentosos.",
 
 
   "casting.steps.title": " Para participar da seleção, você deve completar 3 etapas:",
@@ -41,7 +41,7 @@
   "casting.moreInfo.videoContent.two": "2. Nos conte de que país você é",
   "casting.moreInfo.videoContent.three": "3. Nos conte por que você está participando da seleção(Por exemplo, você esta gravando o vídeo para a nossa seleção para entrar na equipe de futebol mundial)",
   "casting.moreInfo.videoContent.four": " 4. Responda à pergunta. O que o futebol significa para você?",
-  "casting.moreInfo.videoContent.five": " 5. Completar as tarefas técnicas:Atenção! Para os goleiros e todos os outros, as tarefas são diferentes.",
+  "casting.moreInfo.videoContent.five": " 5. Completar as tarefas técnicas. Liberdade absoluta. Aqui você pode mostrar o que achar necessário. Mostre suas melhores habilidades no futebol.",
   "casting.moreInfo.conditions.title": "What conditions will L. BE FREE provid for those who succeed in the casting?",
   "casting.moreInfo.conditions.1": "Relocation to Barcelona (Spain). All expenses for travel, accommodation, meals and other related expenses are fully covered by L. BE FREE",
   "casting.moreInfo.conditions.2": "Accommodation in first-class complex sports",
@@ -63,16 +63,16 @@
   "casting.moreInfo.conditions.18": "Assistance in employment and further support if for any reason you drop out from the world team",
   "casting.page.end": "* Projecto social internacional. Todas as fases de participação na seleção são absolutamente gratuitas. Ao completar esta inscrição, você concorda em usarmos, editarmos e transferirmos seus dados.",
   "casting.checkbox": "Aceito os Termos",
-  "casting.moreInfo.showVideoInstruction": "ПОСМОТРЕТЬ ВИДЕО ИНСТРУКЦИЮ",
-  "casting.moreInfo.showExampleVideo": "ПОСМОТРЕТЬ ПРИМЕР ВИДЕО ДЛЯ КАСТИНГА",
-  "casting.moreInfo.faq": "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ",
+  "casting.moreInfo.showVideoInstruction": "ASSISTIR O VÍDEO DE INSTRUÇÕES",
+  "casting.moreInfo.showExampleVideo": "ASSISTIR AO VÍDEO DE EXEMPLO DE CASTING",
+  "casting.moreInfo.faq": "PERGUNTAS FREQUENTES",
 
-  "casting.tooltip.name": "Write your Name using Latin alphabet (A, b, c, d...)",
-  "casting.tooltip.surname": "Write your Surname using Latin alphabet (A, b, c, d...)",
+  "casting.tooltip.name": "Escreva seu nome usando o alfabeto latino (A, b, c, d ...)",
+  "casting.tooltip.surname": "Escreva seu sobrenome usando o alfabeto latino (A, b, c, d ...)",
   "casting.tooltip.email": "We will use this email address to contact you. Make sure you still have access to it.",
-  "casting.tooltip.link.1": "Add link to your casting-video from the first social network",
+  "casting.tooltip.link.1": "Adicione um link para o seu vídeo de casting da primeira rede social",
   "casting.tooltip.link.2": "Add link of the same casting-video,but from second social network ",
-  "casting.tooltip.textarea": "Write here everything that you said on your video. Use any language. This is necessary for us to understand exactly what you said in your video.",
+  "casting.tooltip.textarea": "Escreva aqui tudo o que disse no seu vídeo. Use qualquer idioma. Isso é necessário para que possamos entender exatamente o que você disse em seu vídeo.",
 
   "contacts": "CONTATO",
   "contacts.title": "CONOSCO",
